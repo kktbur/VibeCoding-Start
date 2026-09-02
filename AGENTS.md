@@ -2,7 +2,7 @@
 
 ## Project identity
 
-This project deploys and maintains the local Vibe Engineering Development Standard v1.2. It is a thin, Markdown-and-Git governance layer with a repo-local `project-knowledge` Skill and deterministic document checks.
+This repository is the source and public package for VibeCoding Start v0.1.0: a skill-only Codex Plugin containing `vibecoding-start` and `vibecoding-project-knowledge`. It turns the Vibe Engineering Development Standard into a reusable workflow for AI-built software projects.
 
 ## First-read order
 
@@ -11,27 +11,27 @@ At the start of a task, read in this order:
 1. `docs/INDEX.md`
 2. `docs/CURRENT.md`
 3. `docs/PRODUCT.md`
-4. `docs/ACCEPTANCE.md`
-5. `docs/CODEMAP.md`
+4. `docs/PRD.md`
+5. `docs/ACCEPTANCE.md`
 
-Read ADRs, plans, worklogs, standards, and `.project-memory/` only when the task needs them.
+Read `docs/CODEMAP.md`, active ADRs, plans, worklogs, standards, tests, and package files only when the task needs them.
 
-## Artifact location
+## Artifact location and privacy
 
-All transition files, temporary outputs, test artifacts, and final results for this project must stay under this project directory. Put large raw command/test output in `.project-memory/evidence/` and keep the human-readable conclusion in `docs/worklog/` or `docs/CURRENT.md`.
+All transition files, temporary outputs, test artifacts, and final results for this project stay under the project directory. Raw sessions, command output, investigations, failed attempts, and test artifacts belong in local `.project-memory/`, which is ignored by Git except for its boundary `README.md`. Publish only redacted examples under `docs/examples/`.
+
+Never store API keys, tokens, cookies, private keys, passwords, or unnecessary personal data in the repository, raw memory, screenshots, or logs. Preserve local raw history; do not rewrite Git history unless a real secret exposure requires a separately approved remediation.
 
 ## Engineering rules
 
-- Document intent before implementation: problem, users, current state, desired state, non-goals, risks, and acceptance.
-- Search for an existing project capability, standard library, official SDK/API/tool, mature open-source project, or package before building a general-purpose capability.
-- If a material capability is built instead of reused, record the alternatives, adaptation/composition options, maintenance cost, and acceptance method in an ADR.
+- Document intent before implementation: problem, users, current state, desired state, requirements, non-goals, constraints, risks, and acceptance.
+- Search for an existing project capability, standard library, official SDK/API/tool, mature open-source project, package, adapter, or composition before building a general capability.
+- If a material capability is built instead of reused, record alternatives, rejection reasons, maintenance cost, and acceptance in an ADR.
 - Keep changes small and verifiable. Do not add speculative frameworks, abstractions, dependencies, or infrastructure.
 - Separate implementation from independent review. The author must not be the final reviewer for an important change.
-- Test normal, error, boundary, regression, and recovery paths in proportion to risk.
-- Every completion claim requires machine evidence, a plain-language explanation, and a user acceptance method.
+- Test normal, error, boundary, invalid-input, regression, and recovery paths in proportion to risk.
+- Every completion claim requires machine evidence, a plain-language explanation, and an owner acceptance method.
 - Record version, last-known-good state, backup, rollback, and migration risk before release.
-- Preserve raw history and evidence. Curate summaries without deleting the source record.
-- Never store API keys, tokens, cookies, private keys, or other secrets in the repository, logs, screenshots, or documents.
 
 ## Engineering gates
 
@@ -43,22 +43,24 @@ G0 Scope → G1 Intent → G2 Reuse → G3 Plan → G4 Build
 → G8 Release → G9 Observation
 ```
 
-For this standards project, run at least the document audit, link audit, and stale-current check after structural changes.
+## Local checks
 
-## Local commands
-
-Use PowerShell 7 explicitly. Run the project checks from the repository root
-with the Python runtime configured by the host:
+Use PowerShell 7 explicitly. Run checks from the repository root with the configured Python runtime:
 
 ```text
-pwsh -NoProfile -Command '& python ".agents\skills\project-knowledge\scripts\audit_docs.py" .'
-pwsh -NoProfile -Command '& python ".agents\skills\project-knowledge\scripts\check_links.py" .'
-pwsh -NoProfile -Command '& python ".agents\skills\project-knowledge\scripts\detect_stale_docs.py" . --as-of 2026-09-02'
+pwsh -NoProfile -Command '& python "plugins\vibecoding-start\skills\vibecoding-project-knowledge\scripts\audit_docs.py" .'
+pwsh -NoProfile -Command '& python "plugins\vibecoding-start\skills\vibecoding-project-knowledge\scripts\check_links.py" .'
+pwsh -NoProfile -Command '& python "plugins\vibecoding-start\skills\vibecoding-project-knowledge\scripts\detect_stale_docs.py" . --max-age-days 30'
+pwsh -NoProfile -Command '& python "tests\validate_plugin.py" "plugins\vibecoding-start" --marketplace ".agents\plugins\marketplace.json"'
+pwsh -NoProfile -Command '& python "tests\test_project_knowledge.py"'
+pwsh -NoProfile -Command '& python "tests\check_name_drift.py" .'
+pwsh -NoProfile -Command '& python -m compileall -q "plugins\vibecoding-start\skills"'
 ```
 
-## Code Review Rules
+Use `--as-of YYYY-MM-DD` only for deterministic fixture checks, not for the normal freshness command.
 
-- Review the diff against `PRODUCT.md`, `ACCEPTANCE.md`, and active ADRs.
-- Flag scope drift, duplicated capabilities, unjustified complexity, missing failure/recovery tests, secret exposure, stale documentation, and changes without a rollback path.
+## Code review rules
+
+- Review the diff against `docs/PRODUCT.md`, `docs/PRD.md`, `docs/ACCEPTANCE.md`, the active v1.3 standard, and active ADRs.
+- Flag scope drift, duplicated Skill sources, unjustified complexity, missing failure/recovery tests, secret exposure, stale documentation, broken links, name drift, and changes without a rollback path.
 - Treat a green automated check as evidence for that check only; do not convert it into a blanket correctness claim.
-
