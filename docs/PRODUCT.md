@@ -33,7 +33,7 @@ Provide one project-local knowledge entry point, reusable `project-knowledge` an
 
 ## Risks
 
-- The project is currently local and has no configured remote, so GitHub Actions is prepared but not remotely executed.
+- The project is now published to the requested public repository; GitHub Actions is present but its execution status depends on the remote workflow run.
 - Codex instruction discovery can depend on the current working directory and the next session restart; the project-local file is the source for this project.
 - Documentation can drift from future code unless the UPDATE and AUDIT modes are used at the end of substantive work.
 - The public repository contains the standard package and project documentation; future changes must retain the same evidence and rollback discipline.
