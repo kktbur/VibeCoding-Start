@@ -1,0 +1,61 @@
+Standards audit evidence
+Date: 2026-09-02
+Project: repository root
+Source plan SHA-256: 6B29AFBAD5BB68FC88CE0EDBA8A946200C27356552C9F66DE4E80552FE8003A6
+
+=== AUDIT_DOCS (exit 0) ===
+PASS AGENTS.md
+PASS docs/INDEX.md
+PASS docs/PRODUCT.md
+PASS docs/ACCEPTANCE.md
+PASS docs/CURRENT.md
+PASS docs/CODEMAP.md
+PASS .agents/skills/project-knowledge/SKILL.md
+AUDIT PASS
+
+=== STALE_DOCS (exit 0) ===
+FRESH CURRENT.md: 0 day(s) old; threshold is 30
+
+=== SKILL_VALIDATE (exit 0) ===
+Skill is valid!
+Validation used the bundled Python executable with UTF-8 mode and a temporary PyYAML dependency because the bundled environment did not include PyYAML and defaulted to GBK on Windows.
+
+=== CHECK_LINKS ===
+LINK AUDIT PASS (31 repository link(s) checked)
+
+=== LOCAL_SKILL_VALIDATE (exit 0) ===
+Skill is valid!
+
+=== GLOBAL_SKILL_VALIDATE (exit 0) ===
+Skill is valid!
+
+=== SKILL_COPY_COMPARE (exit 0) ===
+missing=0
+extra=0
+different=0
+SKILL_COPY_MATCH=TRUE
+
+=== GIT_STATE (exit 0) ===
+branch=main
+root=repository root
+No commits yet on main
+New files are present under `.agents/`, `.github/`, `.project-memory/`, `AGENTS.md`, `.gitignore`, and `docs/`.
+
+=== FINAL_COMBINED_CHECK (exit 0) ===
+AUDIT PASS
+LINK AUDIT PASS (31 repository link(s) checked)
+FRESH CURRENT.md: 0 day(s) old; threshold is 30
+Skill is valid! (repo-local)
+Skill is valid! (installed user copy)
+GLOBAL_MARKER_PRESENT=True
+SKILL_COPY_MISSING=0
+SKILL_COPY_EXTRA=0
+SKILL_COPY_DIFFERENT=0
+SKILL_COPY_MATCH=TRUE
+SECRET_PATTERN_SCAN=PASS
+STAGED_DIFF_CHECK=PASS
+STAGED_FILE_COUNT=43
+PROJECT_FILE_COUNT=43
+GIT_BRANCH=main
+GIT_ROOT=repository root
+
