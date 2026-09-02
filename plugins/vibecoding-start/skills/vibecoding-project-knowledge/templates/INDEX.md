@@ -18,7 +18,7 @@ This is the required navigation entry point for the project. Keep it short and e
 
 ## Cold Archive
 
-- [Local raw-memory boundary](../../.project-memory/README.md)
+- [Local raw-memory boundary](../.project-memory/README.md)
 - Raw sessions, evidence, failed attempts, investigations, and test artifacts remain local by default.
 
 Last reviewed: {DATE}
