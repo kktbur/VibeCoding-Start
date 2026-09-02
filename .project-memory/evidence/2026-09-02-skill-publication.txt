@@ -38,7 +38,14 @@ Project verification
 
 Publication state
 -----------------
-Local commit and remote verification are recorded in the follow-up publication
-evidence after the push. This file captures the pre-publication verification
-state and is intentionally retained as a raw evidence snapshot.
+- All 51 tracked project files are present on the target repository's main
+  branch after individual GitHub create_file commits.
+- The existing README.md was not changed during the file-by-file publication.
+- The new Skill entry point is available at
+  .agents/skills/vibe-engineering-development-standard/SKILL.md.
+- The public repository is ready for owner review:
+  https://github.com/kktbur/VibeCoding-Start
+- The local Git HTTPS push path remains unavailable because the host credential
+  store has no GitHub credential; the authorized GitHub integration completed
+  the publication.
 
