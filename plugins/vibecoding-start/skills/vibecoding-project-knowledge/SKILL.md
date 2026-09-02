@@ -23,10 +23,12 @@ Use for the first formal development session in a project:
 
 1. Inspect `AGENTS.md`, `README*`, `docs/`, source, tests, CI, and any existing architecture or decision records.
 2. Preserve valid existing documents and connect them from `docs/INDEX.md`.
-3. Create or complete the six-document skeleton, keeping each document as short as the project allows.
-4. Create `.project-memory/README.md` to explain the local-only raw-history boundary; do not populate speculative empty directories.
-5. Add `decisions/`, `plans/`, `worklog/`, architecture, testing, operations, release, or incident records only when complexity and risk justify them.
-6. Record the initial deployment in a worklog and create an ADR when a material architecture, security, dependency, or release choice was made.
+3. If `AGENTS.md` is missing, create it from `templates/AGENTS.md`; never overwrite an existing instruction file without an explicit request.
+4. Ensure `.gitignore` contains the local-memory boundary (`.project-memory/*` with the boundary README exception) without replacing unrelated project rules.
+5. Create or complete the six-document skeleton, keeping each document as short as the project allows.
+6. Create `.project-memory/README.md` to explain the local-only raw-history boundary; do not populate speculative empty directories.
+7. Add `decisions/`, `plans/`, `worklog/`, architecture, testing, operations, release, or incident records only when complexity and risk justify them.
+8. Record the initial deployment in a worklog and create an ADR when a material architecture, security, dependency, or release choice was made.
 
 The Hot Context read order is `AGENTS.md`, `docs/INDEX.md`, `docs/CURRENT.md`, `docs/PRODUCT.md`, `docs/PRD.md`, and `docs/ACCEPTANCE.md`. Read `CODEMAP.md` and warm records when needed.
 
