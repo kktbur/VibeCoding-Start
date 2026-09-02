@@ -12,7 +12,7 @@ This file maps the v0.1.0 refactor plan to the current repository. The active pa
 | Single source of truth | No maintained `.agents/skills/` copies | IMPLEMENTED |
 | Plugin manifest | `plugins/vibecoding-start/.codex-plugin/plugin.json` | IMPLEMENTED |
 | Repo marketplace | `.agents/plugins/marketplace.json` | IMPLEMENTED |
-| Raw memory privacy | `.gitignore` plus `.project-memory/README.md` | IMPLEMENTED; de-index existing raw files before commit |
+| Raw memory privacy | `.gitignore` plus `.project-memory/README.md` | IMPLEMENTED; raw records remain local and are absent from the public tree |
 | Redacted example | `docs/examples/project-memory/README.md` | IMPLEMENTED |
 | License | `LICENSE` | IMPLEMENTED; MIT |
 | Product README | `README.md` | IMPLEMENTED |
