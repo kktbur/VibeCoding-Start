@@ -5,6 +5,3 @@ interface:
 
 policy:
   allow_implicit_invocation: true
-
-policy:
-  allow_implicit_invocation: true
