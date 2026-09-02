@@ -14,10 +14,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Audit required documents
-        run: python .agents/skills/project-knowledge/scripts/audit_docs.py .
-      - name: Check Markdown links
-        run: python .agents/skills/project-knowledge/scripts/check_links.py .
+      - name: Audit required project documents
+        run: python plugins/vibecoding-start/skills/vibecoding-project-knowledge/scripts/audit_docs.py .
+      - name: Check curated Markdown links
+        run: python plugins/vibecoding-start/skills/vibecoding-project-knowledge/scripts/check_links.py .
       - name: Check current-state freshness
-        run: python .agents/skills/project-knowledge/scripts/detect_stale_docs.py . --max-age-days 30
-
+        run: python plugins/vibecoding-start/skills/vibecoding-project-knowledge/scripts/detect_stale_docs.py . --max-age-days 30
