@@ -1,8 +1,10 @@
-# Decision Index
+# Decisions Index
 
-| ADR | Status | Decision | Read when |
-|---|---|---|---|
-| [ADR-0001 Adopt the local standard](0001-adopt-vibe-engineering-standard.md) | ACTIVE | Use a thin, indexed Markdown/Git/Skill workflow for this project | Changing the governance architecture |
+| ADR | Status | Decision |
+|---|---|---|
+| [ADR-0001](0001-adopt-vibe-engineering-standard.md) | ACTIVE | Adopt a thin Markdown/Git project-knowledge workflow |
+| [ADR-0002](0002-add-prd-and-standard-v1.3.md) | ACTIVE | Make PRD a core document and activate v1.3 |
+| [ADR-0003](0003-package-plugin-and-rename-skills.md) | ACTIVE | Use one Skill-only Plugin source of truth and unified names |
+| [ADR-0004](0004-local-first-raw-memory.md) | ACTIVE | Keep raw project memory local by default |
 
-Create a new ADR only for material architecture, data, dependency, security-boundary, release, reuse, or complexity decisions. Supersede rather than delete old decisions.
-
+Create another ADR only when a material architecture, security, dependency, publication, or release decision is made.
