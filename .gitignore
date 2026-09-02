@@ -5,5 +5,11 @@ __pycache__/
 .env
 .env.*
 !.env.example
-.project-memory/test-artifacts/*.tmp
 
+# Raw project memory stays local by default. Promote only redacted examples.
+.project-memory/*
+!.project-memory/README.md
+
+# User-level Skill install history stays local; it is not part of this Plugin release.
+/docs/worklog/2026-09-03-global-skill-installation.md
+/docs/worklog/2026-09-03-global-skill-uninstallation.md
