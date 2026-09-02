@@ -26,6 +26,8 @@ INDEX_REFERENCES = (
     "CODEMAP.md",
 )
 REQUIREMENT_HEADING = re.compile(r"^\s*#\s+PRD\s*$", re.IGNORECASE | re.MULTILINE)
+REQUIREMENT_ID = re.compile(r"\bREQ-\d+\b", re.IGNORECASE)
+CANCELLED_WORD = re.compile(r"\b(cancelled|canceled|superseded|removed|no longer active)\b", re.IGNORECASE)
 
 
 def main() -> int:
@@ -64,6 +66,38 @@ def main() -> int:
     if prd_text and not REQUIREMENT_HEADING.search(prd_text):
         print("FAIL docs/PRD.md has no '# PRD' heading")
         failures += 1
+
+    acceptance_text = contents.get("docs/ACCEPTANCE.md", "")
+    prd_ids = {value.upper() for value in REQUIREMENT_ID.findall(prd_text)}
+    acceptance_ids = {value.upper() for value in REQUIREMENT_ID.findall(acceptance_text)}
+    if prd_ids:
+        missing_acceptance = sorted(prd_ids - acceptance_ids)
+        extra_acceptance = sorted(acceptance_ids - prd_ids)
+        if missing_acceptance:
+            print(f"FAIL acceptance is missing PRD requirements: {', '.join(missing_acceptance)}")
+            failures += 1
+        if extra_acceptance:
+            print(f"FAIL acceptance contains requirements absent from PRD: {', '.join(extra_acceptance)}")
+            failures += 1
+
+    current_text = contents.get("docs/CURRENT.md", "")
+    cancelled_ids = set()
+    for line in prd_text.splitlines():
+        if CANCELLED_WORD.search(line):
+            cancelled_ids.update(value.upper() for value in REQUIREMENT_ID.findall(line))
+    for line in current_text.splitlines():
+        current_ids = {value.upper() for value in REQUIREMENT_ID.findall(line)}
+        for cancelled_id in sorted(current_ids & cancelled_ids):
+            if not CANCELLED_WORD.search(line):
+                print(f"FAIL CURRENT.md presents cancelled requirement as current: {cancelled_id}")
+                failures += 1
+
+    gitignore = root / ".gitignore"
+    if (root / ".project-memory").exists():
+        gitignore_text = gitignore.read_text(encoding="utf-8") if gitignore.is_file() else ""
+        if ".project-memory/*" not in gitignore_text:
+            print("FAIL .gitignore does not protect local .project-memory records")
+            failures += 1
 
     agents_text = contents.get("AGENTS.md", "")
     if agents_text and "PRD.md" not in agents_text:
