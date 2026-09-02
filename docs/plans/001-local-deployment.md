@@ -16,4 +16,3 @@
 - A required file is missing or an index link is broken.
 - A proposed change expands the system into infrastructure without a reuse decision and ADR.
 - A command would expose credentials or write to an external GitHub repository without explicit authorization.
-
