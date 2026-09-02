@@ -1,0 +1,44 @@
+Verification snapshot: 2026-09-02
+Project: repository root
+Target: https://github.com/kktbur/VibeCoding-Start
+
+Scope
+-----
+Package the supplied Vibe Engineering Development Standard v1.2 as a reusable
+repository-local Codex Skill and publish the complete standards project to the
+explicitly requested public GitHub repository.
+
+Repository inspection
+---------------------
+- GitHub repository exists, is public, has default branch main, and was empty
+  before publication.
+- The target repository was inspected through the connected GitHub integration.
+- No remote content was modified during the initial inspection.
+
+Skill verification
+------------------
+- Skill path: .agents/skills/vibe-engineering-development-standard/
+- Source-plan reference: references/standard-v1.2.md
+- Supplied plan SHA-256: 6B29AFBAD5BB68FC88CE0EDBA8A946200C27356552C9F66DE4E80552FE8003A6
+- New reference SHA-256: 6B29AFBAD5BB68FC88CE0EDBA8A946200C27356552C9F66DE4E80552FE8003A6
+- Result: SOURCE PLAN HASH PASS
+- quick_validate.py result: Skill is valid!
+- The validator required a temporary PyYAML dependency and UTF-8 mode because
+  the bundled runtime did not include PyYAML and otherwise defaulted to GBK.
+- Manual frontmatter, naming, TODO, and openai.yaml metadata check: PASS.
+
+Project verification
+--------------------
+- audit_docs.py .: AUDIT PASS
+- check_links.py .: LINK AUDIT PASS (36 repository links checked)
+- detect_stale_docs.py . --as-of 2026-09-02: FRESH CURRENT.md
+- git diff --check: PASS; only normal line-ending conversion notices were shown.
+- Independent read-only review: no remaining Skill content, scope, link, or
+  secret-exposure blocker after corrections.
+
+Publication state
+-----------------
+Local commit and remote verification are recorded in the follow-up publication
+evidence after the push. This file captures the pre-publication verification
+state and is intentionally retained as a raw evidence snapshot.
+
