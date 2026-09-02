@@ -83,4 +83,3 @@ Gate strength is risk-adjusted, but the vocabulary remains consistent. Important
 ## Thin implementation boundary
 
 The deployment uses Markdown, Git, Codex repository reading, and small deterministic scripts. It does not implement a memory engine, search engine, verifier platform, deployment engine, CI service, or observability backend.
-
