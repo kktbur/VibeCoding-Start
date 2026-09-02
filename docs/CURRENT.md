@@ -4,7 +4,7 @@ Last updated: 2026-09-03
 
 ## Status
 
-IN PROGRESS — the v0.1.0 package is implemented and published to remote branch `release/v0.1.0`; local and remote tree verification passed, while merge, owner acceptance, and formal release remain pending.
+IN PROGRESS — the v0.1.0 package is implemented and published to remote branch `release/v0.1.0`; PR #1 is open, remote CI is passing, and owner acceptance plus formal release remain pending.
 
 ## Completed
 
@@ -15,6 +15,7 @@ IN PROGRESS — the v0.1.0 package is implemented and published to remote branch
 - Added the active v1.3 standard, an independent PRD, MIT License, product README, local raw-memory boundary, validation scripts, and test fixtures.
 - Kept the existing 9 September 3 local installation/uninstallation records in the working tree; they remain local raw/history material and will not be published as raw memory.
 - Published a 99-file remote release branch with the same public file set as the local release branch; sensitive historical worklogs and raw project memory are absent from that branch.
+- Opened [PR #1](https://github.com/kktbur/VibeCoding-Start/pull/1) from `release/v0.1.0` to `main`; GitHub Actions `Plugin Validation` and `Standards Audit` both passed for the PR head.
 
 ## Active requirements
 
@@ -29,8 +30,8 @@ IN PROGRESS — the v0.1.0 package is implemented and published to remote branch
 
 - Exa was explicitly selected for current-source research, but its connection returned a transport error in this session; no Exa result is being represented as verified.
 - Codex CLI command syntax was checked locally, but a full Plugin installation in a fresh session has not yet been run for this package.
-- The GitHub connector can publish repository files, but remote Actions execution, owner acceptance, and a formal GitHub Release require separate verification.
+- Remote Actions for PR #1 are verified as passing, but a full Plugin installation in a fresh session, owner acceptance, and a formal GitHub Release require separate verification.
 
 ## Next step
 
-Create a PR from `release/v0.1.0` to `main`, review remote CI and the published README/install path, then obtain owner acceptance before any formal tag/Release and first-use observation.
+Review [PR #1](https://github.com/kktbur/VibeCoding-Start/pull/1), the published README/install path, and fresh-session behavior; then obtain owner acceptance before any formal tag/Release and first-use observation.
