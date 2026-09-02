@@ -1,0 +1,7 @@
+interface:
+  display_name: "VibeCoding Project Knowledge"
+  short_description: "Keep project context indexed and recoverable"
+  default_prompt: "Use $vibecoding-project-knowledge to initialize or audit this project's knowledge."
+
+policy:
+  allow_implicit_invocation: false
