@@ -1,7 +1,7 @@
 # Worklog: Package the Vibe Engineering Development Standard as a Skill
 
 - Date: 2026-09-02
-- Status: IN_PROGRESS — local package prepared; GitHub publication pending
+- Status: PUBLISHED — owner review available
 - Plan: [002 Skill publication](../plans/002-skill-publication.md)
 
 ## What changed
@@ -12,6 +12,7 @@
 - Preserved the user-supplied plan verbatim at `references/standard-v1.2.md`; its SHA-256 matches `docs/standards/SOURCE-PLAN.md`.
 - Added a public-package `README.md` and linked the new Skill from the project indexes.
 - Added current official Codex Skill documentation to the external-source record after Exa discovery.
+- Published all 51 tracked project files to `https://github.com/kktbur/VibeCoding-Start` with individual GitHub `create_file` commits; the existing `README.md` was not changed.
 
 ## Rejected routes
 
@@ -28,8 +29,9 @@
 - Source-plan SHA-256 comparison → `SOURCE PLAN HASH PASS`.
 - `git diff --check` → no whitespace errors; only normal CRLF conversion notices.
 - Independent read-only review found no remaining Skill content, scope, link, or secret-exposure blocker after the review corrections.
+- Remote tree verification confirmed the expected 51-file package and the new Skill entry point on `main`.
 
 ## Next step
 
-Create the local package commit, push `main` to `kktbur/VibeCoding-Start`, verify the remote contents, and update this worklog with the final commit and remote evidence.
+Owner review: open `https://github.com/kktbur/VibeCoding-Start`, confirm the Skill is visible under `.agents/skills/`, and use it from a project-local repository when needed.
 
