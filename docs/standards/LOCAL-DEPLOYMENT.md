@@ -15,7 +15,7 @@ This file maps the supplied plan to the current project. It is an implementation
 | Raw sessions and evidence | `.project-memory/sessions/`, `evidence/`, `failed-attempts/`, `test-artifacts/` | DEPLOYED |
 | Deterministic document checks | `scripts/audit_docs.py`, `check_links.py`, `detect_stale_docs.py` | DEPLOYED |
 | Git-backed history | Local repository on `main` | DEPLOYED |
-| GitHub Actions integration point | `.github/workflows/standards-audit.yml` | PREPARED; no remote configured |
+| GitHub Actions integration point | `.github/workflows/standards-audit.yml` | PUBLISHED; present in the target repository |
 | Global Codex policy | Concise section appended to existing global `AGENTS.md`; project rules remain local and more specific | DEPLOYED |
 | User-level Skill installation | User-level Codex skills directory | INSTALLED; owner confirmed fresh-session discovery |
 
