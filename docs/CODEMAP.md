@@ -2,24 +2,24 @@
 
 | Path | Role | Read when |
 |---|---|---|
-| `AGENTS.md` | Project-local Codex instructions and gate rules | Starting any task |
-| `docs/INDEX.md` | Canonical project knowledge navigation | You need to find a document |
-| `docs/PRODUCT.md` | Product intent, scope, non-goals, and risks | Clarifying what to build |
-| `docs/ACCEPTANCE.md` | Machine and owner acceptance | Defining or checking success |
-| `docs/CURRENT.md` | Active status and next step | Resuming work |
-| `docs/standards/` | Normative standard and deployment mapping | Applying or auditing the plan |
-| `docs/decisions/` | Material architecture/process decisions | Reviewing why a choice was made |
-| `docs/plans/` | Staged implementation plans | Continuing unfinished work |
-| `docs/worklog/` | Curated session summaries | Reviewing recent progress |
-| `.project-memory/` | Cold raw history, evidence, and test artifacts | Investigating or reproducing a past result |
-| `.agents/skills/project-knowledge/SKILL.md` | Reusable INIT/UPDATE/AUDIT workflow | Maintaining project knowledge |
-| `.agents/skills/project-knowledge/references/` | Mode-specific guidance | Need detailed rules |
-| `.agents/skills/project-knowledge/templates/` | Starting templates for project docs and ADRs | Initializing another project |
-| `.agents/skills/project-knowledge/scripts/` | Deterministic audit helpers | Verifying structure, links, or freshness |
-| `.agents/skills/vibe-engineering-development-standard/SKILL.md` | Reusable Vibe Engineering workflow and G0-G9 gates | Applying the standard to a project |
-| `.agents/skills/vibe-engineering-development-standard/references/standard-v1.2.md` | Verbatim supplied v1.2 plan | Checking normative source wording |
-| `README.md` | Public package entry point and quick start | Using this repository from GitHub |
-| `.github/workflows/standards-audit.yml` | Optional CI entry point | Running checks on GitHub |
+| `AGENTS.md` | Repository instructions, privacy boundary, and local checks | Starting any task |
+| `docs/INDEX.md` | Canonical project knowledge navigation | Finding the right document |
+| `docs/PRODUCT.md` | Product intent, scope, and non-goals | Clarifying why this exists |
+| `docs/PRD.md` | v0.1.0 requirements and constraints | Checking what must be delivered |
+| `docs/ACCEPTANCE.md` | Machine, owner, release, and recovery criteria | Checking proof and readiness |
+| `docs/CURRENT.md` | Active state, limits, evidence, and next step | Resuming work |
+| `docs/standards/` | Active v1.3 standard and superseded v1.2 history | Checking normative rules |
+| `docs/decisions/` | Material process and package decisions | Understanding why a choice was made |
+| `docs/plans/` | Staged implementation and release plan | Continuing the refactor |
+| `docs/worklog/` | Curated session summaries | Reviewing recent work |
+| `docs/examples/` | Redacted public examples | Explaining reusable patterns |
+| `plugins/vibecoding-start/.codex-plugin/plugin.json` | Installable Plugin manifest | Validating distribution metadata |
+| `plugins/vibecoding-start/skills/vibecoding-start/` | Main workflow Skill and UI metadata | Applying G0-G9 |
+| `plugins/vibecoding-start/skills/vibecoding-project-knowledge/` | Companion INIT/UPDATE/AUDIT Skill, v1.3 reference, templates, and scripts | Maintaining project knowledge |
+| `.agents/plugins/marketplace.json` | Repo-local marketplace catalog | Adding the Plugin to a Codex marketplace |
+| `.github/workflows/standards-audit.yml` | Curated-document CI checks | Reviewing standard repository health |
+| `.github/workflows/plugin-validation.yml` | Plugin, fixture, name, and Python validation | Reviewing package readiness |
+| `tests/` | Standard-library validation scripts and fixtures | Running deterministic tests |
+| `.project-memory/README.md` | Local raw-memory publication boundary | Checking privacy rules |
 
-The map must be updated when the source tree, scripts, or deployment paths change materially.
-
+The active Skill source of truth is `plugins/vibecoding-start/skills/`. Do not recreate a second maintained copy under `.agents/skills/`.
