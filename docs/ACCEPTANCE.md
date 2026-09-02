@@ -12,16 +12,16 @@
 
 ## Machine evidence
 
-- [ ] Required project-document audit passes and requires `docs/PRD.md`.
-- [ ] Repository-relative link audit passes on curated files.
-- [ ] `CURRENT.md` freshness check passes without a hard-coded date in the normal command.
-- [ ] Plugin manifest and marketplace entry validate as JSON and resolve their declared paths.
-- [ ] Both Skill frontmatters and UI metadata validate; names match their directories.
-- [ ] Python helper scripts compile without syntax errors.
-- [ ] Fixture tests show valid projects pass, missing PRD fails, broken index fails link validation, and stale current state fails freshness validation.
-- [ ] Active package and public documentation contain no old invocation names or duplicate Skill source paths.
-- [ ] `.project-memory` raw records are not tracked except for its boundary `README.md`.
-- [ ] The target GitHub repository contains the current Plugin package and the README after publication.
+- [x] Required project-document audit passes and requires `docs/PRD.md`.
+- [x] Repository-relative link audit passes on curated files.
+- [x] `CURRENT.md` freshness check passes without a hard-coded date in the normal command.
+- [x] Plugin manifest and marketplace entry validate as JSON and resolve their declared paths.
+- [x] Both Skill frontmatters and UI metadata validate; names match their directories.
+- [x] Python helper scripts compile without syntax errors.
+- [x] Fixture tests show valid projects pass, missing PRD fails, broken index fails link validation, disconnected acceptance fails requirement validation, cancelled-current drift fails, and stale current state fails freshness validation.
+- [x] Active package and public documentation contain no old invocation names or duplicate Skill source paths.
+- [x] `.project-memory` raw records are not tracked except for its boundary `README.md`.
+- [x] The target GitHub repository's `release/v0.1.0` branch contains the current Plugin package and the README after publication.
 
 ## Owner evidence
 
