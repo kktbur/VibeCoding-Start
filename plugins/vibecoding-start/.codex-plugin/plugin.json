@@ -1,0 +1,37 @@
+{
+  "name": "vibecoding-start",
+  "version": "0.1.0",
+  "description": "A skill-only Codex plugin that adds lightweight engineering gates, indexed project knowledge, and evidence-based delivery to AI-built software projects.",
+  "author": {
+    "name": "kktbur",
+    "url": "https://github.com/kktbur"
+  },
+  "homepage": "https://github.com/kktbur/VibeCoding-Start",
+  "repository": "https://github.com/kktbur/VibeCoding-Start",
+  "license": "MIT",
+  "keywords": [
+    "vibe-coding",
+    "software-engineering",
+    "codex",
+    "agent-skills",
+    "project-knowledge",
+    "quality-gates"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "VibeCoding Start",
+    "shortDescription": "Keep AI-built projects maintainable from day one",
+    "longDescription": "VibeCoding Start gives Codex a lightweight, risk-scaled engineering workflow: PRD before code, reuse before custom implementation, indexed project knowledge, independent review, adversarial verification, human acceptance, and rollback-aware release.",
+    "developerName": "kktbur",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Write"
+    ],
+    "websiteURL": "https://github.com/kktbur/VibeCoding-Start",
+    "defaultPrompt": [
+      "Use $vibecoding-start to set up this project before coding.",
+      "Use $vibecoding-start to review this important change against the project gates."
+    ],
+    "brandColor": "#5B5BD6"
+  }
+}
