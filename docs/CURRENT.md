@@ -1,41 +1,35 @@
 # Current State
 
-Last updated: 2026-09-02
+Last updated: 2026-09-03
 
 ## Status
 
-ACTIVE — local deployment verified and owner accepted; public Skill is published and available for owner review.
+IN PROGRESS — v0.1.0 public-distribution refactor is being implemented on local branch `release/v0.1.0`; the active package source has moved to the Plugin layout, while publication and owner acceptance remain pending.
 
 ## Completed
 
-- Created this project directory with the requested English name.
-- Initialized a local Git repository on branch `main`.
-- Added project-level `AGENTS.md` with Hot/Warm/Cold reading order, artifact location, engineering gates, evidence rules, and review rules.
-- Added the mandatory documentation skeleton and medium-scale indexes.
-- Added the repo-local `.agents/skills/project-knowledge` Skill with INIT, UPDATE, and AUDIT modes.
-- Added the repo-local `.agents/skills/vibe-engineering-development-standard` Skill with a concise operational entry point, UI metadata, and the supplied v1.2 plan preserved verbatim as a reference.
-- Added a public-package README and linked the new Skill from the project knowledge indexes.
-- Published the complete standards package to `https://github.com/kktbur/VibeCoding-Start` through the authorized GitHub integration, leaving the existing README unchanged.
-- Added templates, deterministic scripts, source-plan preservation, external-source notes, and a GitHub Actions workflow.
-- Installed the validated Skill in the user-level Codex skills directory.
-- Appended the concise cross-project engineering defaults from `docs/standards/GLOBAL-AGENTS-SECTION.md` to the existing global Codex `AGENTS.md` without overwriting it.
-- Completed structure, link, freshness, local Skill, global Skill, and Skill-copy consistency checks.
+- Preserved the v1.2 source plan and prior baseline history.
+- Created the local `release/v0.1.0` branch from the v1.2 package state.
+- Scaffolded a repo-local marketplace and a Skill-only Plugin manifest.
+- Moved the two maintained Skill sources under `plugins/vibecoding-start/skills/`.
+- Added the active v1.3 standard, an independent PRD, MIT License, product README, local raw-memory boundary, validation scripts, and test fixtures.
+- Kept the existing 9 September 3 local installation/uninstallation records in the working tree; they remain local raw/history material and will not be published as raw memory.
+
+## Active requirements
+
+- `REQ-001` through `REQ-007` in [PRD.md](PRD.md).
 
 ## Evidence
 
-- [Deployment mapping](standards/LOCAL-DEPLOYMENT.md)
-- [Initial deployment worklog](worklog/2026-09-02-initial-deployment.md)
-- [Session record](../.project-memory/sessions/2026-09-02-initial-deployment.md)
-- [Raw test evidence](../.project-memory/evidence/2026-09-02-standards-audit.txt)
+- Local raw output remains under `.project-memory/` and is ignored except for its boundary README.
+- Curated implementation and validation results will be recorded in the v0.1.0 refactor worklog after checks complete.
 
 ## Known limits
 
-- This project directory is its own local Git repository; its parent directory is not part of the repository.
-- The requested public repository `kktbur/VibeCoding-Start` was verified as empty before publication and now contains the published package; the local `origin` remote is configured, but the host's normal HTTPS Git credential store is not.
-- The existing global Codex `AGENTS.md` content was preserved; the new standard is an appended section.
-- Owner confirmed that the newly installed global Skill appears in the fresh Codex session Skill list.
+- Exa was explicitly selected for current-source research, but its connection returned a transport error in this session; no Exa result is being represented as verified.
+- Codex CLI command syntax was checked locally, but a full Plugin installation in a fresh session has not yet been run for this package.
+- The GitHub connector can publish repository files, but remote Actions execution and a formal GitHub Release require separate verification.
 
 ## Next step
 
-- Owner review is available at `https://github.com/kktbur/VibeCoding-Start`. Future changes should continue from `docs/INDEX.md` and run UPDATE plus the relevant AUDIT checks.
-
+Run the local package/document/fixture checks, complete independent review, commit the refactor on `release/v0.1.0`, then publish the reviewed tree to the existing GitHub repository and verify the remote branch.
