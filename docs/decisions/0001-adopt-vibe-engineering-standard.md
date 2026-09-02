@@ -16,7 +16,7 @@ The project needs a repeatable way to preserve intent, current state, decisions,
 
 ## Decision
 
-Adopt option 3. Every project task in this directory begins from `docs/INDEX.md` and the Hot Context documents. The repo-local `project-knowledge` Skill provides INIT, UPDATE, and AUDIT modes. Raw history remains under `.project-memory/`; durable facts and decisions are curated into active documents.
+Adopt option 3. Every project task in this directory begins from `docs/INDEX.md` and the Hot Context documents. The current `vibecoding-project-knowledge` Skill provides INIT, UPDATE, and AUDIT modes inside the Skill-only Plugin. Raw history remains local under `.project-memory/`; durable facts and decisions are curated into active documents.
 
 ## Consequences
 
@@ -31,4 +31,3 @@ Adopt option 3. Every project task in this directory begins from `docs/INDEX.md`
 - [Supplied source plan](../standards/SOURCE-PLAN.md)
 - [Local deployment mapping](../standards/LOCAL-DEPLOYMENT.md)
 - [External sources](../references/SOURCES.md)
-
