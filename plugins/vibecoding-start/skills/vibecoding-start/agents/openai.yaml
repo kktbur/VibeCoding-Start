@@ -1,0 +1,10 @@
+interface:
+  display_name: "VibeCoding Start"
+  short_description: "Keep AI-built projects maintainable from day one"
+  default_prompt: "Use $vibecoding-start to set up and govern this project."
+
+policy:
+  allow_implicit_invocation: true
+
+policy:
+  allow_implicit_invocation: true
