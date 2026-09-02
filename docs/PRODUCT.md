@@ -2,39 +2,37 @@
 
 ## Problem
 
-Software projects started in Codex can lose intent, decisions, evidence, and current state when those facts exist only in chat history. The supplied Vibe Engineering Development Standard v1.2 defines a repeatable local structure to make each project indexable, recoverable, reviewable, verifiable, and rollback-aware from its first day.
+AI-assisted projects can accumulate code faster than they preserve intent, requirements, decisions, evidence, and current state. The result is difficult for both the owner and a later Codex session to understand, review, verify, or safely change.
 
-## Owner and users
+## Users and owner
 
-- Owner: Product Owner of this local project.
-- Primary user: the project owner working with Codex.
-- Secondary users: future Codex sessions or reviewers who need to understand the project without replaying the entire chat.
+- Owner: the maintainer of VibeCoding Start.
+- Primary users: people using Codex to build and maintain software.
+- Secondary users: future Codex sessions, reviewers, and contributors who need a concise project map.
 
 ## Desired outcome
 
-Provide one project-local knowledge entry point, reusable `project-knowledge` and Vibe Engineering Standard Skills, lightweight engineering gates, preserved raw evidence, deterministic checks, and a public GitHub package that makes the standard reusable and auditable.
+VibeCoding Start should be a small, installable, reusable Codex Plugin that gives AI-built projects a uniform knowledge entry point, a PRD-driven workflow, reuse-before-build decisions, independent review, counterexample-focused verification, human acceptance, and rollback-aware release.
 
 ## In scope
 
-- Project-level `AGENTS.md` and indexed Hot/Warm/Cold documentation.
-- A repo-local `.agents/skills/project-knowledge` Skill with INIT, UPDATE, and AUDIT modes.
-- A repo-local `.agents/skills/vibe-engineering-development-standard` Skill that turns the supplied v1.2 plan into an operational workflow, with the exact plan preserved as a reference.
-- Templates and deterministic checks for required documents, links, and stale current-state data.
-- Git history initialized for this project and a GitHub Actions workflow that can run the checks if the repository is later hosted on GitHub.
-- Publication of this package to the explicitly requested public repository `kktbur/VibeCoding-Start`.
-- A traceable record of the supplied plan and the external sources used to validate the deployment shape.
+- A Skill-only Plugin named `vibecoding-start`.
+- A companion Skill named `vibecoding-project-knowledge` for INIT, UPDATE, and AUDIT.
+- Vibe Engineering Development Standard v1.3 as the active normative reference, with v1.2 retained as superseded history.
+- Six core project documents: `INDEX`, `PRODUCT`, `PRD`, `ACCEPTANCE`, `CURRENT`, and `CODEMAP`.
+- Local-first raw project memory with intentionally redacted public examples.
+- MIT licensing, a product-oriented README, deterministic package/document checks, and a GitHub Actions validation path.
 
 ## Non-goals
 
-- Building a memory database, vector database, search engine, documentation platform, deployment engine, observability backend, or custom CI server.
-- Automatically publishing future changes without a new explicit request.
-- Overwriting the existing global Codex `AGENTS.md`.
-- Claiming that documentation checks prove application correctness; they only prove the checked invariants.
+- Memory databases, vector databases, search engines, custom testing frameworks, deployment frameworks, observability backends, MCP servers, or a universal orchestrator.
+- Maintaining copied Skill sources under both `.agents/skills/` and the Plugin package.
+- Claiming that documentation or package checks prove an application is correct.
+- Publishing private raw sessions or automatically publishing future repository changes.
 
 ## Risks
 
-- The project is now published to the requested public repository; GitHub Actions is present but its execution status depends on the remote workflow run.
-- Codex instruction discovery can depend on the current working directory and the next session restart; the project-local file is the source for this project.
-- Documentation can drift from future code unless the UPDATE and AUDIT modes are used at the end of substantive work.
-- The public repository contains the standard package and project documentation; future changes must retain the same evidence and rollback discipline.
-
+- Plugin installation behavior can vary by Codex host and requires a fresh session after installation or update.
+- Existing public history contains the earlier repository-local layout; the active source of truth moves to `plugins/vibecoding-start/` without rewriting history.
+- Raw memory previously tracked in the repository must be removed from the current tree while being preserved locally; history rewrite is reserved for confirmed secret exposure.
+- A GitHub Actions workflow can be present and syntactically valid without its remote run having completed; remote execution must be verified separately.
