@@ -1,0 +1,9 @@
+.codex-log/
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+.project-memory/test-artifacts/*.tmp
+
