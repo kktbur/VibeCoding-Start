@@ -18,6 +18,8 @@ This file maps the v0.1.0 refactor plan to the current repository. The active pa
 | Product README | `README.md` | IMPLEMENTED |
 | Document checks | `audit_docs.py`, `check_links.py`, `detect_stale_docs.py` | UPDATED |
 | Plugin checks | `tests/validate_plugin.py`, fixture tests, name-drift check, `compileall` | IMPLEMENTED |
-| CI | `standards-audit.yml`, `plugin-validation.yml` | IMPLEMENTED; remote run pending |
+| CI | `standards-audit.yml`, `plugin-validation.yml` | IMPLEMENTED; PR #1 runs passed |
 | End-to-end fresh-session install | Codex Plugin installation in a temporary project | OWNER/ENVIRONMENT TEST PENDING |
-| GitHub v0.1.0 Release | Tag and Release object | PENDING owner acceptance and remote CI |
+| GitHub v0.1.0 Release | Tag and Release object | PENDING owner acceptance |
+
+Remote review: [PR #1](https://github.com/kktbur/VibeCoding-Start/pull/1) is open from `release/v0.1.0` to `main`; both configured GitHub Actions checks passed for its current head.
