@@ -1,0 +1,5 @@
+interface:
+  display_name: "Project Knowledge"
+  short_description: "Index project intent, evidence, decisions, and state"
+  default_prompt: "Use $project-knowledge to initialize or audit this project knowledge system."
+
