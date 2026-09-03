@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/vibecoding-start-cover.png" alt="VibeCoding Start cover" width="1200">
+</p>
+
 # VibeCoding Start
 
 Stop vibe coding from turning into unmaintainable AI-generated messes.
