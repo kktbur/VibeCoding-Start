@@ -26,11 +26,19 @@
 ## Owner evidence
 
 - [ ] A new user can understand the product from the README first screen.
-- [ ] A fresh Codex session can install or select the Plugin and invoke `$vibecoding-start`.
-- [ ] A new project receives `AGENTS.md`, `INDEX`, `PRODUCT`, `PRD`, `ACCEPTANCE`, `CURRENT`, and `CODEMAP`.
+- [x] A fresh Codex CLI session installed the isolated package, selected `$vibecoding-start`, and completed the first-session workflow.
+- [x] A new empty project received `AGENTS.md`, `INDEX`, `PRODUCT`, `PRD`, `ACCEPTANCE`, `CURRENT`, and `CODEMAP`.
 - [ ] A material requirement change has a visible path from PRD to acceptance and verification.
-- [ ] Raw session data is not included in a normal Git commit.
-- [ ] The owner confirms the package is ready for the `v0.1.0` tag and Release.
+- [x] Raw session data was not included in the empty project's Git index or commit history.
+- [x] The owner requested merge, tag, and Release after the listed E2E checks passed; the remaining release operations are recorded below.
+
+## E2E evidence
+
+- [x] `$vibecoding-start` was invoked in a fresh Codex CLI session against an empty Git project.
+- [x] INIT created the required project-document skeleton; UPDATE preserved raw evidence and curated the current state; AUDIT passed.
+- [x] The final audit passed document structure, repository-relative links, freshness, and the `.project-memory` boundary.
+- [x] The raw E2E record is retained locally under `.project-memory/e2e/` and is intentionally excluded from the public Git tree.
+- [x] The tested empty project remained on `main` with zero commits, zero indexed files, and zero application source files.
 
 ## Failure and recovery
 
@@ -49,4 +57,4 @@
 - Release notes: [Plan 003 release notes](plans/003-v0.1.0-refactor.md#release-notes)
 - Rollback: retain the v1.2 commit and restore the prior package tree only by an intentional revert or branch decision; do not rewrite history by default.
 - Migration note: consumers move from the old repository-local path to the installed `vibecoding-start` Plugin.
-- Owner acceptance: pending until a fresh-session install and repository review are completed.
+- Owner acceptance: the requested release condition was satisfied by the E2E checklist; optional manual product review remains a separate observation activity.
