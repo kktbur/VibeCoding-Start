@@ -57,4 +57,6 @@
 - Release notes: [Plan 003 release notes](plans/003-v0.1.0-refactor.md#release-notes)
 - Rollback: retain the v1.2 commit and restore the prior package tree only by an intentional revert or branch decision; do not rewrite history by default.
 - Migration note: consumers move from the old repository-local path to the installed `vibecoding-start` Plugin.
+- Merge evidence: PR #1 was squash-merged into `main` at commit `48a14a895a8a71ded7fc2927a8a92db1c7bc302f`; post-merge CI runs #168 and #213 passed.
+- Tag/Release status: `v0.1.0` has not yet been created because this session lacks an authenticated GitHub tag/Release write channel.
 - Owner acceptance: the requested release condition was satisfied by the E2E checklist; optional manual product review remains a separate observation activity.
