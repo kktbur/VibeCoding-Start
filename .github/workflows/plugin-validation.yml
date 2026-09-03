@@ -1,0 +1,24 @@
+name: Plugin Validation
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate Plugin and Skill contracts
+        run: python tests/validate_plugin.py plugins/vibecoding-start --marketplace .agents/plugins/marketplace.json
+      - name: Run project-knowledge fixtures
+        run: python tests/test_project_knowledge.py
+      - name: Check active name consistency
+        run: python tests/check_name_drift.py .
+      - name: Compile Skill helper scripts
+        run: python -m compileall -q plugins/vibecoding-start/skills

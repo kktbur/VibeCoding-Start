@@ -11,8 +11,8 @@ These sources were read to validate the deployment shape. They are guidance sour
 | [OpenAI Codex repository: `docs/agents_md.md`](https://github.com/openai/codex/blob/main/docs/agents_md.md) | Official GitHub repository | GitHub-backed confirmation that Codex's AGENTS guidance points to the official documentation |
 | [AGENTS.md](https://agents.md/) | Open ecosystem specification site | AGENTS.md complements human-facing README content with agent-facing build, test, convention, and security context |
 | [Google Cloud: Architecture decision records overview](https://docs.cloud.google.com/architecture/architecture-decision-records) | Official technical documentation | ADRs capture context, options, decisions, consequences, and history close to code in Markdown/source control |
+| Local Codex Plugin Creator schema and CLI help | Host-provided runtime documentation | `.codex-plugin/plugin.json`, repository marketplace shape, validation fields, and current `codex plugin marketplace/add` command syntax used for this refactor |
 
 ## Source-quality note
 
-OpenAI and Google entries are first-party documentation for the behavior they describe. The AGENTS.md site is an ecosystem reference. Exa was used to locate the current official Codex Skill documentation, and the GitHub connector was used to inspect the requested target repository before the explicitly authorized publication.
-
+OpenAI and Google entries are first-party documentation for the behavior they describe. The AGENTS.md site is an ecosystem reference. The previous package publication used Exa to locate current official Codex Skill documentation; the Exa connection returned a transport error during this refactor, so no new Exa result is represented as verified. The host-provided Plugin Creator schema and CLI help were used for the local package contract, and the GitHub connector remains the publication path.

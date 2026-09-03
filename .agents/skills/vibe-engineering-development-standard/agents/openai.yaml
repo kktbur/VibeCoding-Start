@@ -1,8 +1,0 @@
-interface:
-  display_name: "Vibe Engineering Development Standard"
-  short_description: "Apply evidence-based engineering gates"
-  default_prompt: "Use $vibe-engineering-development-standard to apply the Vibe Engineering Development Standard to this project."
-
-policy:
-  allow_implicit_invocation: true
-
