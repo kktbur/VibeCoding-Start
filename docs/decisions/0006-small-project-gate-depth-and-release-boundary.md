@@ -27,4 +27,3 @@ Small projects keep the required seven-file project skeleton while avoiding empt
 - [M2 public example](../examples/small-project/README.md)
 - [v0.2.0 PR #5](https://github.com/kktbur/VibeCoding-Start/pull/5), merged at `994b121e1cff0b7eb514ce03ea79b83766d28c28`
 - [v0.2.0 GitHub Release](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.2.0) and tag-triggered CI runs [Plugin Validation](https://github.com/kktbur/VibeCoding-Start/actions/runs/33965703200) / [Standards Audit](https://github.com/kktbur/VibeCoding-Start/actions/runs/33965703206)
-
