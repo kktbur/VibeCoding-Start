@@ -51,6 +51,8 @@ The project always has a small knowledge skeleton. Small projects keep it short;
 
 - [Project knowledge index](docs/INDEX.md) — the repository's active documentation map
 - [Small-project path](docs/examples/small-project/README.md) — a compact example for a new project
+- [Engineering standard](plugins/vibecoding-start/skills/vibecoding-project-knowledge/references/standard-v1.3.md) — normative G0-G9 rules
+- [Scaling rules](plugins/vibecoding-start/skills/vibecoding-project-knowledge/references/scaling-rules.md) — Small/Medium/Large depth and artifact minimums
 - [Cross-Agent usage notes](docs/CROSS-AGENT.md) — how multiple coding agents share project truth safely
 - [Changelog](CHANGELOG.md) — version history and migration notes
 - [GitHub Releases](https://github.com/kktbur/VibeCoding-Start/releases) — pinned public release records
@@ -190,6 +192,8 @@ VibeCoding Start 是一个仅由 Skills 组成的 Codex Plugin，从项目第一
 
 - [Project knowledge index](docs/INDEX.md) — 仓库的主动文档索引
 - [Small-project path](docs/examples/small-project/README.md) — 新项目的紧凑示例
+- [Engineering standard](plugins/vibecoding-start/skills/vibecoding-project-knowledge/references/standard-v1.3.md) — G0-G9 规范规则
+- [Scaling rules](plugins/vibecoding-start/skills/vibecoding-project-knowledge/references/scaling-rules.md) — Small/Medium/Large 深度和文件最低要求
 - [Cross-Agent usage notes](docs/CROSS-AGENT.md) — 多个 coding agent 如何安全共享项目事实
 - [Changelog](CHANGELOG.md) — 版本历史和迁移说明
 - [GitHub Releases](https://github.com/kktbur/VibeCoding-Start/releases) — 固定版本的公开发布记录
