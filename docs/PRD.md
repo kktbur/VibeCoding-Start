@@ -1,8 +1,8 @@
 # PRD
 
-- Status: ACTIVE — M2 foundation merged; v0.2.0 release candidate in preparation
-- Release baseline: `v0.1.1`
-- Next milestone: `v0.2.0`
+- Status: ACTIVE — `v0.2.0` released; v0.3.0 M3 ecosystem and governance candidate in preparation
+- Release baseline: `v0.2.0`
+- Next milestone: `v0.3.0`
 - Product: VibeCoding Start Skill-only Plugin
 
 ## Problem
@@ -24,6 +24,7 @@ The previous repository package worked as a repository-local Skill but did not y
 5. A contributor can run deterministic checks and receive a clear failure when the PRD, package manifest, links, names, or fixtures are broken.
 6. A user or another coding agent can use the compact small-project example and the Cross-Agent handoff notes without relying on hidden chat state.
 7. A user starting a genuinely small local tool can understand the minimum gate depth without creating empty Large-project directories.
+8. A Chinese-speaking user can read a dedicated user-facing guide, while a contributor or security reporter can find safe repository-local entry points without relying on hidden chat state.
 
 ## Functional requirements
 
@@ -71,11 +72,25 @@ The M2 milestone MUST document a repository-local handoff contract with a read o
 
 The v0.2.0 milestone MUST document a concrete Small/Medium/Large gate-depth matrix. A Small project MUST still receive the seven-file project skeleton, but MUST NOT receive empty architecture, operations, incident, or other governance directories merely to look complete.
 
+### REQ-012 — User-facing Chinese README
+
+The v0.3.0 milestone MUST provide a `README.zh-CN.md` covering user-facing motivation, installation, privacy, examples, contribution/security links, and license guidance. The English README MUST link to it, and the Chinese README MUST state that the English `standard-v1.3.md` is the normative standard.
+
+### REQ-013 — Contributor entry points
+
+The v0.3.0 milestone MUST provide `CONTRIBUTING.md`, bug/Skill-behavior/documentation Issue templates, and a pull request template. These entry points MUST request requirement traceability, reproducible verification, independent review for important Skill wording changes, rollback guidance, and redacted evidence without requiring a CLA.
+
+### REQ-014 — Security reporting boundary
+
+The v0.3.0 milestone MUST provide `SECURITY.md` with a private vulnerability-reporting route, secret-handling rules, and an explicit statement that the Skill does not intentionally upload project memory. It MUST NOT invent a maintainer email address or ask users to disclose secrets in public Issues or PRs.
+
 ## Non-goals
 
 - Implementing infrastructure named in the original plan as explicitly out of scope.
 - Rewriting public Git history when no confirmed secret exposure requires it.
 - Treating static validation as a substitute for a fresh-session installation test or owner acceptance.
+- Translating the entire engineering standard or creating a second normative standard source.
+- Renaming the versioned standard file in the v0.3.0 governance candidate; that optional migration requires a separate decision and PR.
 
 ## Constraints
 
@@ -99,6 +114,5 @@ The v0.2.0 milestone MUST document a concrete Small/Medium/Large gate-depth matr
 
 ## Open Questions
 
-- Should a future release add a contribution guide, security policy, or issue templates?
-- Which real-user feedback should determine the next M2/M3 scope after the owner-directed foundation is reviewed?
-
+- The contribution guide, security policy, and Issue/PR templates are now included in the v0.3.0 candidate; their rendered usability remains an owner-acceptance check.
+- Which real-user feedback should determine follow-up improvements after the owner-directed v0.3.0 governance surface is released?

@@ -1,8 +1,8 @@
 # ADR-0006: Small-Project Gate Depth and Release Boundary
 
-- Status: ACTIVE
+- Status: COMPLETED; RELEASED
 - Date: 2026-09-05
-- Scope: v0.2.0 release-candidate preparation
+- Scope: v0.2.0 release and rollback boundary
 
 ## Context
 
@@ -14,7 +14,7 @@ The M2 documentation foundation is merged into the public repository. The origin
 - Put concrete Small-project artifact minimums and practical scaling guidance in the companion `scaling-rules.md` reference.
 - Keep `vibecoding-start` as the normal entry point and let `vibecoding-project-knowledge` own `INIT`, `UPDATE`, and `AUDIT`; make that ownership explicit in both Skills.
 - Protect the contract with a standard-library-only deterministic test.
-- Prepare the package as `0.2.0`, but keep the stable README installation pin on the existing `v0.1.1` tag until a `v0.2.0` tag and Release are independently created and verified.
+- Prepare the package as `0.2.0`, and move the stable README installation pin to `v0.2.0` only after its tag, Release, and tag-triggered CI are independently verified.
 
 ## Consequences
 
@@ -25,5 +25,5 @@ Small projects keep the required seven-file project skeleton while avoiding empt
 - [Plan 006](../plans/006-v0.2.0-release-candidate.md)
 - [Small-project gate-depth test](../../tests/test_small_path_contract.py)
 - [M2 public example](../examples/small-project/README.md)
-- [v0.2.0 candidate PR #5](https://github.com/kktbur/VibeCoding-Start/pull/5) and its passing CI runs
-
+- [v0.2.0 PR #5](https://github.com/kktbur/VibeCoding-Start/pull/5), merged at `994b121e1cff0b7eb514ce03ea79b83766d28c28`
+- [v0.2.0 GitHub Release](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.2.0) and tag-triggered CI runs [Plugin Validation](https://github.com/kktbur/VibeCoding-Start/actions/runs/33965703200) / [Standards Audit](https://github.com/kktbur/VibeCoding-Start/actions/runs/33965703206)

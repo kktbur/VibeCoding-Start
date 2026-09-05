@@ -1,6 +1,6 @@
 {
   "name": "vibecoding-start",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A skill-only Codex plugin that adds lightweight engineering gates, indexed project knowledge, and evidence-based delivery to AI-built software projects.",
   "author": {
     "name": "kktbur",
@@ -35,4 +35,3 @@
     "brandColor": "#5B5BD6"
   }
 }
-

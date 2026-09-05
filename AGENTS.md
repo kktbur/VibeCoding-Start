@@ -2,7 +2,7 @@
 
 ## Project identity
 
-This repository is the source and public package for VibeCoding Start: a skill-only Codex Plugin containing `vibecoding-start` and `vibecoding-project-knowledge`. The public `v0.1.1` release is the last stable package; the next `v0.2.0` candidate adds the documented Small-project path without adding infrastructure.
+This repository is the source and public package for VibeCoding Start: a skill-only Codex Plugin containing `vibecoding-start` and `vibecoding-project-knowledge`. The published `v0.2.0` release is the current stable package; the `v0.3.0` candidate adds user-facing Chinese guidance and public contribution/security entry points without adding infrastructure.
 
 ## First-read order
 
@@ -55,6 +55,7 @@ pwsh -NoProfile -Command '& python "tests\validate_plugin.py" "plugins\vibecodin
 pwsh -NoProfile -Command '& python "tests\test_project_knowledge.py"'
 pwsh -NoProfile -Command '& python "tests\test_public_examples.py"'
 pwsh -NoProfile -Command '& python "tests\test_readme_navigation.py"'
+pwsh -NoProfile -Command '& python "tests\test_governance_docs.py"'
 pwsh -NoProfile -Command '& python "tests\test_small_path_contract.py"'
 pwsh -NoProfile -Command '& python "tests\test_version_consistency.py"'
 pwsh -NoProfile -Command '& python "tests\check_version_consistency.py"'
@@ -68,10 +69,13 @@ Use `--as-of YYYY-MM-DD` only for deterministic fixture checks, not for the norm
 On macOS or Linux, run the equivalent checks from the repository root with Python 3:
 
 ```sh
+bash scripts/check.sh
+
 python3 tests/validate_plugin.py plugins/vibecoding-start --marketplace .agents/plugins/marketplace.json
 python3 tests/test_project_knowledge.py
 python3 tests/test_public_examples.py
 python3 tests/test_readme_navigation.py
+python3 tests/test_governance_docs.py
 python3 tests/test_small_path_contract.py
 python3 tests/test_version_consistency.py
 python3 tests/check_line_endings.py .
@@ -87,4 +91,3 @@ python3 plugins/vibecoding-start/skills/vibecoding-project-knowledge/scripts/det
 - Review the diff against `docs/PRODUCT.md`, `docs/PRD.md`, `docs/ACCEPTANCE.md`, the active v1.3 standard, and active ADRs.
 - Flag scope drift, duplicated Skill sources, unjustified complexity, missing failure/recovery tests, secret exposure, stale documentation, broken links, name drift, and changes without a rollback path.
 - Treat a green automated check as evidence for that check only; do not convert it into a blanket correctness claim.
-
