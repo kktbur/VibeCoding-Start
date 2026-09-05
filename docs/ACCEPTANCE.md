@@ -31,7 +31,7 @@
 - [ ] A new user can understand the product from the README first screen.
 - [x] A fresh Codex CLI session installed the isolated package, selected `$vibecoding-start`, and completed the first-session workflow.
 - [x] A new empty project received `AGENTS.md`, `INDEX`, `PRODUCT`, `PRD`, `ACCEPTANCE`, `CURRENT`, and `CODEMAP`.
-- [ ] A material requirement change has a visible path from PRD to acceptance and verification.
+- [x] The material REQ-008 change has a visible path from PRD to acceptance, deterministic checks, and the M1 worklog.
 - [x] Raw session data was not included in the empty project's Git index or commit history.
 - [x] The owner requested merge, tag, and Release after the listed E2E checks passed; the release record is maintained below.
 
@@ -54,13 +54,14 @@
 
 ## Release record
 
-- Version: `0.1.1` (in progress)
+- Version: `0.1.1` (M1 merged; G8 tag/Release pending)
 - Last known good: public `v0.1.0` tag at merge commit `48a14a895a8a71ded7fc2927a8a92db1c7bc302f`.
 - Backup/snapshot: remote `main` commit `0b570c1` and local `main` commit `837cf49` are retained as recoverable pre-refactor states.
 - Release notes: [Plan 003 release notes](plans/003-v0.1.0-refactor.md#release-notes)
+- M1 release notes: [Plan 004](plans/004-v0.1.1-improvement.md)
 - Previous release: [v0.1.0 GitHub Release](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.1.0)
 - Rollback: revert the merged M1 PR/commit to restore the v0.1.0 package; retain the v1.2 commit as an earlier recovery snapshot and do not rewrite history by default.
 - Migration note: consumers move from the old repository-local path to the installed `vibecoding-start` Plugin.
-- Merge evidence: PR #1 was squash-merged into `main` at commit `48a14a895a8a71ded7fc2927a8a92db1c7bc302f`; post-merge CI runs #168 and #213 passed.
-- Tag/Release status: `v0.1.0` is published and points to merge commit `48a14a8…`; v0.1.1 publication remains a later G8 checkpoint.
+- Merge evidence: PR #1 was squash-merged into `main` at commit `48a14a895a8a71ded7fc2927a8a92db1c7bc302f`; PR #2 was squash-merged at `38d8c074a90a404ee6455d56693392e2f0eccd67`; post-merge M1 CI runs [#184](https://github.com/kktbur/VibeCoding-Start/actions/runs/33953806721) and [#229](https://github.com/kktbur/VibeCoding-Start/actions/runs/33953806729) passed.
+- Tag/Release status: `v0.1.0` is published and points to merge commit `48a14a8…`; v0.1.1 is merged and package-ready, but its tag/Release remains pending an authenticated Release-write path.
 - Owner acceptance: the requested release condition was satisfied by the E2E checklist; optional manual product review remains a separate observation activity.

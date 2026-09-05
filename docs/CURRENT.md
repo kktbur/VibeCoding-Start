@@ -4,7 +4,7 @@ Last updated: 2026-09-05
 
 ## Status
 
-M1 IN PROGRESS — v0.1.0 is released from the verified merge commit `48a14a8…`; the current public `main` baseline is `22d29f5…` and includes the README cover. The v0.1.1 maintenance package is being prepared from that baseline.
+M1 COMPLETE — v0.1.1 maintenance changes were squash-merged into public `main` at `38d8c074a90a404ee6455d56693392e2f0eccd67`; post-merge Plugin Validation #184 and Standards Audit #229 passed. The v0.1.1 tag and GitHub Release remain a separate G8 step because the current GitHub write path cannot create Release objects.
 
 ## Completed
 
@@ -21,6 +21,9 @@ M1 IN PROGRESS — v0.1.0 is released from the verified merge commit `48a14a8…
 - Squash-merged PR #1 into `main` at commit `48a14a895a8a71ded7fc2927a8a92db1c7bc302f`; post-merge `Plugin Validation` run #168 and `Standards Audit` run #213 both passed.
 - Created the public `v0.1.0` tag and [GitHub Release](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.1.0) from the verified merge commit.
 - Added the public README cover at `assets/vibecoding-start-cover.png` on `main`.
+- Implemented M1 WP-11 through WP-16 on [PR #2](https://github.com/kktbur/VibeCoding-Start/pull/2), including README, CHANGELOG/version gates, audit fixtures, LF policy, marketplace rename, and cross-platform check documentation.
+- Passed PR #2 CI after correcting the remote fixture boundary and normalizing the inherited `docs/standards/SOURCE-PLAN.md` blob to LF.
+- Squash-merged PR #2 into `main` at `38d8c074a90a404ee6455d56693392e2f0eccd67`; post-merge [Plugin Validation #184](https://github.com/kktbur/VibeCoding-Start/actions/runs/33953806721) and [Standards Audit #229](https://github.com/kktbur/VibeCoding-Start/actions/runs/33953806729) passed.
 
 ## Active requirements
 
@@ -37,9 +40,10 @@ M1 IN PROGRESS — v0.1.0 is released from the verified merge commit `48a14a8…
 
 - The E2E used a temporary local marketplace and temporary Plugin installation; both were removed after the test, while the local evidence was retained.
 - The first release intentionally does not include clean-room installation, Docker smoke testing, or release automation; those are deferred until real users and Issues provide evidence that they are needed.
-- Remote Actions are verified as passing both for the PR head and the merged `main` commit; the v0.1.0 release metadata is now also verified.
+- Remote Actions are verified as passing for the M1 PR head and the merged `main` commit; the v0.1.0 release metadata remains valid and unchanged.
+- The v0.1.1 package is merged and ready for release, but its tag and GitHub Release have not been created because the current GitHub connector has no Release-creation write operation.
 - The v0.1.0 Release metadata and tag target are valid; its body still contains historical pre-publication wording and should be cleaned up when Release-edit access is available.
 
 ## Next step
 
-Finish the v0.1.1 M1 checks and owner review, merge the maintenance changes, publish v0.1.1 when the release write path is available, and then start the M2 small-project path and example work.
+Create the v0.1.1 tag and GitHub Release from `38d8c074a90a404ee6455d56693392e2f0eccd67` when an authenticated Release-write path is available, then start the M2 small-project path and example work.
