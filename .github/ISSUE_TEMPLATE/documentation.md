@@ -20,4 +20,3 @@ Describe the smallest useful correction. Do not include secrets or raw `.project
 ## Evidence
 
 Include a safe reproduction, broken link, command result, or comparison when available.
-
