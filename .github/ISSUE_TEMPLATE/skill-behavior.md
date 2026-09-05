@@ -29,4 +29,3 @@ Describe the smallest project and input that reproduces the behavior. Redact pri
 ## Evidence
 
 Include only safe, redacted output and the checks you ran.
-
