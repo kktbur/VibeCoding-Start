@@ -29,4 +29,3 @@ assignees: ""
 ## Evidence
 
 Paste a short redacted error or a link to a safe minimal reproduction. Do not attach sensitive logs or private project paths.
-
