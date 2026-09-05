@@ -7,6 +7,8 @@
   <a href="#vibecoding-start-english"><kbd>English</kbd></a>
   &nbsp;|&nbsp;
   <a href="#vibecoding-start-chinese"><kbd>中文</kbd></a>
+  &nbsp;|&nbsp;
+  <a href="README.zh-CN.md"><kbd>中文 README</kbd></a>
 </p>
 
 <a name="vibecoding-start-english"></a>
@@ -54,6 +56,9 @@ The project always has a small knowledge skeleton. Small projects keep it short;
 - [Engineering standard](plugins/vibecoding-start/skills/vibecoding-project-knowledge/references/standard-v1.3.md) — normative G0-G9 rules
 - [Scaling rules](plugins/vibecoding-start/skills/vibecoding-project-knowledge/references/scaling-rules.md) — Small/Medium/Large depth and artifact minimums
 - [Cross-Agent usage notes](docs/CROSS-AGENT.md) — how multiple coding agents share project truth safely
+- [Chinese user README](README.zh-CN.md) — user-facing Chinese installation, privacy, and usage guide
+- [Contributing](CONTRIBUTING.md) — local checks, PR expectations, and safe evidence boundaries
+- [Security](SECURITY.md) — private vulnerability reporting and secret-handling policy
 - [Changelog](CHANGELOG.md) — version history and migration notes
 - [GitHub Releases](https://github.com/kktbur/VibeCoding-Start/releases) — pinned public release records
 
@@ -81,10 +86,10 @@ The companion Skill manages `INIT`, `UPDATE`, and `AUDIT` for project knowledge.
 
 ## Installation
 
-Add this repository as a Codex plugin marketplace, then install the Plugin. The pinned release command below uses `v0.1.1`; use `main` only when you intentionally want the latest development state.
+Add this repository as a Codex plugin marketplace, then install the Plugin. The pinned release command below uses the published `v0.2.0`; use `main` only when you intentionally want the latest development state.
 
 ```bash
-codex plugin marketplace add https://github.com/kktbur/VibeCoding-Start --ref v0.1.1
+codex plugin marketplace add https://github.com/kktbur/VibeCoding-Start --ref v0.2.0
 codex plugin add vibecoding-start@kktbur
 ```
 
@@ -195,6 +200,9 @@ VibeCoding Start 是一个仅由 Skills 组成的 Codex Plugin，从项目第一
 - [Engineering standard](plugins/vibecoding-start/skills/vibecoding-project-knowledge/references/standard-v1.3.md) — G0-G9 规范规则
 - [Scaling rules](plugins/vibecoding-start/skills/vibecoding-project-knowledge/references/scaling-rules.md) — Small/Medium/Large 深度和文件最低要求
 - [Cross-Agent usage notes](docs/CROSS-AGENT.md) — 多个 coding agent 如何安全共享项目事实
+- [中文用户 README](README.zh-CN.md) — 面向使用者的中文安装、隐私和使用说明
+- [Contributing](CONTRIBUTING.md) — 本地检查、PR 要求和安全证据边界
+- [Security](SECURITY.md) — 私密漏洞报告和敏感信息处理政策
 - [Changelog](CHANGELOG.md) — 版本历史和迁移说明
 - [GitHub Releases](https://github.com/kktbur/VibeCoding-Start/releases) — 固定版本的公开发布记录
 
@@ -222,10 +230,10 @@ plugins/vibecoding-start/
 
 ## 安装
 
-先把这个仓库添加为 Codex Plugin marketplace，再安装 Plugin。下面的固定版本命令使用 `v0.1.1`；只有在你明确需要最新开发状态时，才使用 `main`。
+先把这个仓库添加为 Codex Plugin marketplace，再安装 Plugin。下面的固定版本命令使用已经发布的 `v0.2.0`；只有在你明确需要最新开发状态时，才使用 `main`。
 
 ```bash
-codex plugin marketplace add https://github.com/kktbur/VibeCoding-Start --ref v0.1.1
+codex plugin marketplace add https://github.com/kktbur/VibeCoding-Start --ref v0.2.0
 codex plugin add vibecoding-start@kktbur
 ```
 
