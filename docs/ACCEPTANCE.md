@@ -33,7 +33,7 @@
 - [x] Active package and public documentation contain no old invocation names or duplicate Skill source paths.
 - [x] `.project-memory` raw records are not tracked except for its boundary `README.md`.
 - [x] The v0.3.0 governance contract checks the Chinese README, contributor/security entry points, Issue/PR templates, language links, normative-standard boundary, and privacy wording.
-- [ ] A new v0.3.0 fresh Codex session completes the empty-project `$vibecoding-start` E2E; the first attempt was blocked by the host's Windows sandbox helper before any project file was generated.
+- [x] A new v0.3.0 fresh Codex session completes the empty-project `$vibecoding-start` E2E; a safe isolated retry completed `INIT → UPDATE → AUDIT`, generated the required knowledge skeleton, passed the bundled audits, kept raw evidence ignored, and created no commit or application source.
 - [x] The target GitHub repository's `release/v0.1.0` branch contains the current Plugin package and the README after publication.
 - [x] The v0.2.0 candidate's local full gate run and independent standards/spec reviews pass; PR #5 remote Plugin Validation and Standards Audit pass for both push and pull_request events.
 
@@ -72,7 +72,7 @@
 - Failure: old Skill names remain in active package files. Recovery: update the active source and metadata; retain old names only in explicitly historical records.
 - Failure: fresh-session installation or runtime discovery fails. Recovery: preserve package evidence, inspect the host's configured marketplace and cache, and do not claim installation success.
 - Failure: remote CI or Release has not been verified. Recovery: keep package readiness separate from remote workflow/Release status and verify those resources before announcing them.
-- Failure: the fresh-session E2E runner fails before writing the isolated project. Recovery: rerun on a host with a functioning Codex Windows sandbox helper or obtain an explicitly approved, narrowly scoped test runner; do not grant a nested agent unrestricted filesystem access merely to force the test through.
+- Failure: the fresh-session E2E runner fails before writing the isolated project. Recovery: preserve the failed attempt, rerun with the normal restricted `workspace-write` sandbox in a writable isolated project, and keep the published v0.2.0 package as rollback; do not grant a nested agent unrestricted filesystem access merely to force the test through.
 
 ## Release record
 
@@ -93,4 +93,5 @@
 - v0.2.0 tag-triggered CI: [Plugin Validation](https://github.com/kktbur/VibeCoding-Start/actions/runs/33965703200) and [Standards Audit](https://github.com/kktbur/VibeCoding-Start/actions/runs/33965703206) completed with conclusion `success` for tag `v0.2.0` at the release commit.
 - Owner acceptance: the owner confirmed the v0.2.0 Release and authorized the owner-directed v0.3.0 M3 candidate; rendered acceptance of the new governance files remains pending on PR #6.
 - Historical v0.2.0 candidate review evidence: [PR #5](https://github.com/kktbur/VibeCoding-Start/pull/5) was reviewed at head `fa1a1209fc3f2fb713b9ff3f7d9381e9ea85c5c5`; [Plugin Validation PR](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962069628), [Standards Audit PR](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962069831), [Plugin Validation push](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962047841), and [Standards Audit push](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962047900) all passed before the merge.
-- v0.3.0 candidate evidence: [PR #6](https://github.com/kktbur/VibeCoding-Start/pull/6) was open at evidence head `de94f16b6b4aca62c3ef03b88e5b7ab8ab055d23`; remote [Plugin Validation](https://github.com/kktbur/VibeCoding-Start/actions/runs/33969319745) and [Standards Audit](https://github.com/kktbur/VibeCoding-Start/actions/runs/33969319667) both concluded `success`. The fresh-session E2E remains pending, and no v0.3.0 merge, tag, or Release is claimed.
+- v0.3.0 candidate evidence: [PR #6](https://github.com/kktbur/VibeCoding-Start/pull/6) remains open and its recorded remote [Plugin Validation](https://github.com/kktbur/VibeCoding-Start/actions/runs/33969319745) plus [Standards Audit](https://github.com/kktbur/VibeCoding-Start/actions/runs/33969319667) concluded `success`. The fresh-session E2E now passes in the local isolated retry; no v0.3.0 merge, tag, or Release is claimed.
+
