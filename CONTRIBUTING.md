@@ -69,4 +69,3 @@ Do not paste raw `.project-memory` sessions, command logs, screenshots containin
 ## CLA and licensing
 
 This project does not require a Contributor License Agreement. Contributions are accepted under the repository's [MIT License](LICENSE).
-
