@@ -60,4 +60,3 @@ RELEASED v0.2.0 BASELINE + v0.3.0 M3 IN PROGRESS — v0.1.1 M1 maintenance chang
 ## Next step
 
 Complete the local M3 governance implementation, run the full check suite and independent review, then publish the candidate through a reviewable `v0.3.0` PR. Keep merge, tag, GitHub Release, and tag-triggered CI as separate checkpoints; until those are verified, keep `v0.2.0` as the stable install pin and rollback package. Keep the optional standard filename migration, clean-room installation, Docker smoke testing, release automation, and further infrastructure behind separate decisions.
-
