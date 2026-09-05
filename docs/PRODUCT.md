@@ -22,6 +22,7 @@ VibeCoding Start should be a small, installable, reusable Codex Plugin that give
 - Six core project documents: `INDEX`, `PRODUCT`, `PRD`, `ACCEPTANCE`, `CURRENT`, and `CODEMAP`.
 - Local-first raw project memory with intentionally redacted public examples.
 - A compact small-project example and repository-local Cross-Agent handoff guidance.
+- Explicit gate-depth scaling so genuinely small projects keep the required skeleton without inheriting unnecessary Medium/Large ceremony.
 - MIT licensing, a product-oriented README, deterministic package/document checks, and a GitHub Actions validation path.
 
 ## Non-goals
