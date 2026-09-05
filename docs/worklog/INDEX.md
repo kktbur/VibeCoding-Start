@@ -10,4 +10,3 @@
 | [2026-09-05 v0.3.0 M3 governance](2026-09-05-v0.3.0-m3-governance.md) | IN PROGRESS | Tracking the Chinese README, contribution/security entry points, templates, and governance checks |
 
 Worklogs contain the durable explanation: what changed, why, rejected routes, verification, result, and next step. Raw stdout belongs in local `.project-memory/` and is not part of the public package.
-
