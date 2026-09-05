@@ -91,4 +91,3 @@ python3 plugins/vibecoding-start/skills/vibecoding-project-knowledge/scripts/det
 - Review the diff against `docs/PRODUCT.md`, `docs/PRD.md`, `docs/ACCEPTANCE.md`, the active v1.3 standard, and active ADRs.
 - Flag scope drift, duplicated Skill sources, unjustified complexity, missing failure/recovery tests, secret exposure, stale documentation, broken links, name drift, and changes without a rollback path.
 - Treat a green automated check as evidence for that check only; do not convert it into a blanket correctness claim.
-
