@@ -56,6 +56,8 @@ Run after major changes or on a regular cadence. Check:
 - raw local history contains no credentials, tokens, cookies, private keys, or unredacted personal data;
 - plugin and Skill names remain consistent after a rename.
 
+The document audit accepts a PRD H1 of `PRD`, `产品需求文档`, or `产品需求`, including a subtitle. It recognizes the English and Chinese requirement-lifecycle words used by the project, and accepts common `.project-memory` directory ignore rules without treating comments as protection.
+
 Use the bundled scripts when applicable:
 
 ```text

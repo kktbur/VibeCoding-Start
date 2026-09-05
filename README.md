@@ -4,6 +4,10 @@
 
 # VibeCoding Start
 
+[![Plugin Validation](https://github.com/kktbur/VibeCoding-Start/actions/workflows/plugin-validation.yml/badge.svg?branch=main)](https://github.com/kktbur/VibeCoding-Start/actions/workflows/plugin-validation.yml)
+[![Standards Audit](https://github.com/kktbur/VibeCoding-Start/actions/workflows/standards-audit.yml/badge.svg?branch=main)](https://github.com/kktbur/VibeCoding-Start/actions/workflows/standards-audit.yml)
+[![License: MIT](https://img.shields.io/github/license/kktbur/VibeCoding-Start)](LICENSE)
+
 Stop vibe coding from turning into unmaintainable AI-generated messes.
 
 VibeCoding Start is a skill-only Codex Plugin that adds a lightweight engineering system from the first project session:
@@ -34,6 +38,12 @@ Idea → PRODUCT → PRD → ACCEPTANCE → Reuse → Plan
 
 The project always has a small knowledge skeleton. Small projects keep it short; larger projects earn deeper decisions, plans, testing, operations, release, and incident records.
 
+## Documentation
+
+- [Project knowledge index](docs/INDEX.md) — the repository's active documentation map
+- [Changelog](CHANGELOG.md) — version history and migration notes
+- [GitHub Releases](https://github.com/kktbur/VibeCoding-Start/releases) — pinned public release records
+
 ## What it includes
 
 This repository is the single public source of truth for the `vibecoding-start` Plugin:
@@ -58,30 +68,33 @@ The companion Skill manages `INIT`, `UPDATE`, and `AUDIT` for project knowledge.
 
 ## Installation
 
-The repository includes a local marketplace manifest at `.agents/plugins/marketplace.json`. After the release branch is merged into `main`, the current Codex CLI help supports this Git marketplace flow:
+Add this repository as a Codex plugin marketplace, then install the Plugin. Use a release tag when you want a pinned version.
 
-```text
+```bash
 codex plugin marketplace add https://github.com/kktbur/VibeCoding-Start --ref main
-codex plugin add vibecoding-start@personal
+codex plugin add vibecoding-start@kktbur
 ```
 
-While reviewing the release branch before that merge, replace `--ref main` with `--ref release/v0.1.0`.
+For a local checkout:
 
-For a local checkout, replace the first source with the path to the cloned repository:
-
-```text
+```bash
 codex plugin marketplace add ./VibeCoding-Start
-codex plugin add vibecoding-start@personal
+codex plugin add vibecoding-start@kktbur
 ```
 
-Start a new Codex session after installation, then invoke:
+Start a **new** Codex session after installation, then invoke:
 
 ```text
 $vibecoding-start
 I want to build a small local file-renaming tool.
 ```
 
-The CLI command shape was checked against the available Codex CLI help. The repository's static checks validate the package; the final installation result still depends on the Codex host and its configured access to the selected marketplace.
+### Troubleshooting
+
+- Restart Codex in a new session if `$vibecoding-start` is unknown after installation.
+- Confirm the marketplace name in `.agents/plugins/marketplace.json` matches the `@name` in `codex plugin add`.
+- Run `codex plugin marketplace list` to confirm that the repository source is configured.
+- This package does not install a memory database, CI system, or hosted observability backend.
 
 ## Quick start behavior
 

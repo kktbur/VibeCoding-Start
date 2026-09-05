@@ -146,8 +146,8 @@ def check_marketplace(path: Path, failures: list[str]) -> None:
     except (OSError, json.JSONDecodeError) as exc:
         fail(f"invalid marketplace manifest: {exc}", failures)
         return
-    if marketplace.get("name") != "personal":
-        fail("repo marketplace name must be personal for this package", failures)
+    if marketplace.get("name") != "kktbur":
+        fail("repo marketplace name must be kktbur for this package", failures)
     entries = [entry for entry in marketplace.get("plugins", []) if entry.get("name") == "vibecoding-start"]
     if len(entries) != 1:
         fail("marketplace must contain exactly one vibecoding-start entry", failures)

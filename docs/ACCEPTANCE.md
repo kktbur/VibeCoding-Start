@@ -9,6 +9,7 @@
 - REQ-005: Deterministic documentation, link, freshness, name-drift, package, fixture, and compilation checks are available.
 - REQ-006: The README explains the product, installation shape, quick start, privacy boundary, compatibility, and license.
 - REQ-007: Release, rollback, backup, migration, acceptance, and observation status are recorded explicitly.
+- REQ-008: PowerShell 7 and Unix-like check commands are documented, and repository text files use the shared LF policy.
 
 ## Machine evidence
 
@@ -19,6 +20,8 @@
 - [x] Both Skill frontmatters and UI metadata validate; names match their directories.
 - [x] Python helper scripts compile without syntax errors.
 - [x] Fixture tests show valid projects pass, missing PRD fails, broken index fails link validation, disconnected acceptance fails requirement validation, cancelled-current drift fails, and stale current state fails freshness validation.
+- [x] Version consistency and tracked-text line-ending checks are available in the Plugin validation path.
+- [x] PRD subtitle, Chinese heading, Chinese lifecycle-state, directory-form `.project-memory` ignore, and invalid-UTF-8 fixture cases are covered.
 - [x] Active package and public documentation contain no old invocation names or duplicate Skill source paths.
 - [x] `.project-memory` raw records are not tracked except for its boundary `README.md`.
 - [x] The target GitHub repository's `release/v0.1.0` branch contains the current Plugin package and the README after publication.
@@ -30,7 +33,7 @@
 - [x] A new empty project received `AGENTS.md`, `INDEX`, `PRODUCT`, `PRD`, `ACCEPTANCE`, `CURRENT`, and `CODEMAP`.
 - [ ] A material requirement change has a visible path from PRD to acceptance and verification.
 - [x] Raw session data was not included in the empty project's Git index or commit history.
-- [x] The owner requested merge, tag, and Release after the listed E2E checks passed; the remaining release operations are recorded below.
+- [x] The owner requested merge, tag, and Release after the listed E2E checks passed; the release record is maintained below.
 
 ## E2E evidence
 
@@ -51,12 +54,13 @@
 
 ## Release record
 
-- Version: `0.1.0`
-- Last known good: local `main` commit `837cf49` (v1.2 repository-local package)
+- Version: `0.1.1` (in progress)
+- Last known good: public `v0.1.0` tag at merge commit `48a14a895a8a71ded7fc2927a8a92db1c7bc302f`.
 - Backup/snapshot: remote `main` commit `0b570c1` and local `main` commit `837cf49` are retained as recoverable pre-refactor states.
 - Release notes: [Plan 003 release notes](plans/003-v0.1.0-refactor.md#release-notes)
-- Rollback: retain the v1.2 commit and restore the prior package tree only by an intentional revert or branch decision; do not rewrite history by default.
+- Previous release: [v0.1.0 GitHub Release](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.1.0)
+- Rollback: revert the merged M1 PR/commit to restore the v0.1.0 package; retain the v1.2 commit as an earlier recovery snapshot and do not rewrite history by default.
 - Migration note: consumers move from the old repository-local path to the installed `vibecoding-start` Plugin.
 - Merge evidence: PR #1 was squash-merged into `main` at commit `48a14a895a8a71ded7fc2927a8a92db1c7bc302f`; post-merge CI runs #168 and #213 passed.
-- Tag/Release status: `v0.1.0` has not yet been created because this session lacks an authenticated GitHub tag/Release write channel.
+- Tag/Release status: `v0.1.0` is published and points to merge commit `48a14a8…`; v0.1.1 publication remains a later G8 checkpoint.
 - Owner acceptance: the requested release condition was satisfied by the E2E checklist; optional manual product review remains a separate observation activity.

@@ -25,9 +25,46 @@ INDEX_REFERENCES = (
     "CURRENT.md",
     "CODEMAP.md",
 )
-REQUIREMENT_HEADING = re.compile(r"^\s*#\s+PRD\s*$", re.IGNORECASE | re.MULTILINE)
+REQUIREMENT_HEADING = re.compile(
+    r"^\s*#\s+(PRD|产品需求文档|产品需求)\b", re.IGNORECASE | re.MULTILINE
+)
 REQUIREMENT_ID = re.compile(r"\bREQ-\d+\b", re.IGNORECASE)
-CANCELLED_WORD = re.compile(r"\b(cancelled|canceled|superseded|removed|no longer active)\b", re.IGNORECASE)
+CANCELLED_WORD = re.compile(
+    r"(?:\b(cancelled|canceled|superseded|removed|no longer active|deprecated)\b|"
+    r"已取消|已废弃|已替代|已移除|不再有效|已关闭)",
+    re.IGNORECASE,
+)
+PROJECT_MEMORY_RULES = {
+    ".project-memory",
+    ".project-memory/",
+    ".project-memory/*",
+    "/.project-memory",
+    "/.project-memory/",
+    "/.project-memory/*",
+    "**/.project-memory/**",
+}
+
+
+def read_utf8(target: Path, relative_path: str, failures: list[int]) -> str:
+    try:
+        return target.read_text(encoding="utf-8")
+    except UnicodeDecodeError:
+        print(f"FAIL cannot read {relative_path} as UTF-8")
+        failures[0] += 1
+        return ""
+
+
+def protects_project_memory(text: str) -> bool:
+    for raw_line in text.splitlines():
+        rule = raw_line.split("#", 1)[0].strip()
+        if rule.startswith("!"):
+            continue
+        if (
+            rule in PROJECT_MEMORY_RULES
+            or rule.endswith(".project-memory/")
+        ):
+            return True
+    return False
 
 
 def main() -> int:
@@ -48,7 +85,9 @@ def main() -> int:
             print(f"FAIL missing {relative_path}")
             failures += 1
             continue
-        text = target.read_text(encoding="utf-8")
+        failure_count = [failures]
+        text = read_utf8(target, relative_path, failure_count)
+        failures = failure_count[0]
         contents[relative_path] = text
         if not text.strip():
             print(f"FAIL empty {relative_path}")
@@ -64,7 +103,7 @@ def main() -> int:
 
     prd_text = contents.get("docs/PRD.md", "")
     if prd_text and not REQUIREMENT_HEADING.search(prd_text):
-        print("FAIL docs/PRD.md has no '# PRD' heading")
+        print("FAIL docs/PRD.md has no PRD or 产品需求 heading")
         failures += 1
 
     acceptance_text = contents.get("docs/ACCEPTANCE.md", "")
@@ -94,8 +133,14 @@ def main() -> int:
 
     gitignore = root / ".gitignore"
     if (root / ".project-memory").exists():
-        gitignore_text = gitignore.read_text(encoding="utf-8") if gitignore.is_file() else ""
-        if ".project-memory/*" not in gitignore_text:
+        failure_count = [failures]
+        gitignore_text = (
+            read_utf8(gitignore, ".gitignore", failure_count)
+            if gitignore.is_file()
+            else ""
+        )
+        failures = failure_count[0]
+        if not protects_project_memory(gitignore_text):
             print("FAIL .gitignore does not protect local .project-memory records")
             failures += 1
 

@@ -1,5 +1,7 @@
 # PRD
 
+The H1 may include a subtitle, such as `# PRD — Local File Renamer`, or use `# 产品需求文档` / `# 产品需求` for a Chinese project.
+
 ## Problem
 
 {PROBLEM}

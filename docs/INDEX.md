@@ -9,7 +9,7 @@ This is the canonical starting point for the repository. It separates active pro
 | [Project instructions](../AGENTS.md) | Repository rules, privacy boundary, and local checks | ACTIVE |
 | [Current state](CURRENT.md) | What is implemented, verified, and next | ACTIVE |
 | [Product](PRODUCT.md) | Why VibeCoding Start exists and who it serves | ACTIVE |
-| [PRD](PRD.md) | v0.1.0 requirements and non-goals | ACTIVE |
+| [PRD](PRD.md) | v0.1.1 requirements and non-goals | ACTIVE |
 | [Acceptance](ACCEPTANCE.md) | Machine, owner, release, and recovery criteria | ACTIVE |
 
 ## Warm Knowledge
@@ -24,6 +24,7 @@ This is the canonical starting point for the repository. It separates active pro
 | Decisions | [decisions/INDEX.md](decisions/INDEX.md) | Reviewing material choices |
 | Plans | [plans/INDEX.md](plans/INDEX.md) | Continuing staged work |
 | Worklog | [worklog/INDEX.md](worklog/INDEX.md) | Understanding recent changes |
+| Changelog | [CHANGELOG.md](../CHANGELOG.md) | Reviewing release differences |
 | Public example | [Project memory example](examples/project-memory/README.md) | Explaining the local raw-memory boundary |
 
 ## Cold Archive Boundary
@@ -37,4 +38,4 @@ Task End → preserve local raw memory → update CURRENT / PRD / active docs
 → update CODEMAP / ADR / worklog as needed → update this index → audit
 ```
 
-Last reviewed: 2026-09-03
+Last reviewed: 2026-09-05

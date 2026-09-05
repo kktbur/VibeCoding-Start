@@ -2,7 +2,7 @@
 
 ## Project identity
 
-This repository is the source and public package for VibeCoding Start v0.1.0: a skill-only Codex Plugin containing `vibecoding-start` and `vibecoding-project-knowledge`. It turns the Vibe Engineering Development Standard into a reusable workflow for AI-built software projects.
+This repository is the source and public package for VibeCoding Start v0.1.1: a skill-only Codex Plugin containing `vibecoding-start` and `vibecoding-project-knowledge`. It turns the Vibe Engineering Development Standard into a reusable workflow for AI-built software projects.
 
 ## First-read order
 
@@ -53,11 +53,28 @@ pwsh -NoProfile -Command '& python "plugins\vibecoding-start\skills\vibecoding-p
 pwsh -NoProfile -Command '& python "plugins\vibecoding-start\skills\vibecoding-project-knowledge\scripts\detect_stale_docs.py" . --max-age-days 30'
 pwsh -NoProfile -Command '& python "tests\validate_plugin.py" "plugins\vibecoding-start" --marketplace ".agents\plugins\marketplace.json"'
 pwsh -NoProfile -Command '& python "tests\test_project_knowledge.py"'
+pwsh -NoProfile -Command '& python "tests\test_version_consistency.py"'
+pwsh -NoProfile -Command '& python "tests\check_version_consistency.py"'
+pwsh -NoProfile -Command '& python "tests\check_line_endings.py" .'
 pwsh -NoProfile -Command '& python "tests\check_name_drift.py" .'
 pwsh -NoProfile -Command '& python -m compileall -q "plugins\vibecoding-start\skills"'
 ```
 
 Use `--as-of YYYY-MM-DD` only for deterministic fixture checks, not for the normal freshness command.
+
+On macOS or Linux, run the equivalent checks from the repository root with Python 3:
+
+```sh
+python3 tests/validate_plugin.py plugins/vibecoding-start --marketplace .agents/plugins/marketplace.json
+python3 tests/test_project_knowledge.py
+python3 tests/test_version_consistency.py
+python3 tests/check_line_endings.py .
+python3 tests/check_name_drift.py .
+python3 -m compileall -q plugins/vibecoding-start/skills
+python3 plugins/vibecoding-start/skills/vibecoding-project-knowledge/scripts/audit_docs.py .
+python3 plugins/vibecoding-start/skills/vibecoding-project-knowledge/scripts/check_links.py .
+python3 plugins/vibecoding-start/skills/vibecoding-project-knowledge/scripts/detect_stale_docs.py . --max-age-days 30
+```
 
 ## Code review rules
 
