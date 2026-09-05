@@ -31,4 +31,3 @@
 ## Owner acceptance
 
 How can the owner verify the result from the public repository or rendered documentation?
-
