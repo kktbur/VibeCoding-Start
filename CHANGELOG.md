@@ -4,6 +4,12 @@ All notable changes to VibeCoding Start are documented here.
 
 ## [Unreleased]
 
+### Added
+
+- Add an English-first, Chinese-second README with stable language navigation and a pinned `v0.1.1` installation path.
+- Add a redacted small-project example and repository-local Cross-Agent usage notes.
+- Add deterministic validation for the public small-project example.
+
 ## [0.1.1] - 2026-09-05
 
 ### Fixed

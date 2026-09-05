@@ -4,7 +4,7 @@ Last updated: 2026-09-05
 
 ## Status
 
-M1 COMPLETE — v0.1.1 maintenance changes were squash-merged into public `main` at `38d8c074a90a404ee6455d56693392e2f0eccd67`; post-merge Plugin Validation #184 and Standards Audit #229 passed. The v0.1.1 tag and GitHub Release remain a separate G8 step because the current GitHub write path cannot create Release objects.
+RELEASED BASELINE + M2 IN PROGRESS — v0.1.1 M1 maintenance changes were squash-merged into public `main` at `38d8c074a90a404ee6455d56693392e2f0eccd67`; the release closeout documentation is on `main` at `f9367395e16af7a8acce57107087af8d3ae11b36`. The public `v0.1.1` tag and GitHub Release are published from that commit, and the post-release Plugin Validation #189 and Standards Audit #234 both passed. G8 is complete. The owner has explicitly authorized M2 continuation; no external user feedback is being claimed for this scope.
 
 ## Completed
 
@@ -24,26 +24,32 @@ M1 COMPLETE — v0.1.1 maintenance changes were squash-merged into public `main`
 - Implemented M1 WP-11 through WP-16 on [PR #2](https://github.com/kktbur/VibeCoding-Start/pull/2), including README, CHANGELOG/version gates, audit fixtures, LF policy, marketplace rename, and cross-platform check documentation.
 - Passed PR #2 CI after correcting the remote fixture boundary and normalizing the inherited `docs/standards/SOURCE-PLAN.md` blob to LF.
 - Squash-merged PR #2 into `main` at `38d8c074a90a404ee6455d56693392e2f0eccd67`; post-merge [Plugin Validation #184](https://github.com/kktbur/VibeCoding-Start/actions/runs/33953806721) and [Standards Audit #229](https://github.com/kktbur/VibeCoding-Start/actions/runs/33953806729) passed.
+- Published the public [`v0.1.1` tag and GitHub Release](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.1.1) at `f9367395e16af7a8acce57107087af8d3ae11b36`; the Release is published, non-draft, and targets `main`.
+- Verified the tagged Plugin manifest remains version `0.1.1`, the marketplace identifier is `kktbur`, and the tag and `main` resolve to the same commit.
+- Started the owner-directed M2 foundation: bilingual README navigation, pinned release installation, a redacted small-project example, Cross-Agent usage notes, and deterministic public-example validation.
 
 ## Active requirements
 
-- `REQ-001` through `REQ-008` in [PRD.md](PRD.md).
+- `REQ-001` through `REQ-010` in [PRD.md](PRD.md); REQ-009 and REQ-010 are the active M2 requirements.
 
 ## Evidence
 
 - Local raw output remains under `.project-memory/` and is ignored except for its boundary README; the complete E2E record is retained under `.project-memory/e2e/`.
 - Local document, link, freshness, package, fixture, name-drift, compilation, and external Plugin/Skill validators pass; the remote release tree has matching file paths and core-file content after newline normalization.
-- M1 local verification passes: 16 unit tests, document audit, 52-link audit, freshness, Plugin validation, version consistency, LF line endings, name drift, and compilation.
+- M1 local verification passes: 16 unit tests, document audit, 53-link audit, freshness, Plugin validation, version consistency, LF line endings, name drift, and compilation.
 - Final E2E output: `INIT_RESULT=PASS`, `UPDATE_RESULT=PASS`, `FINAL_AUDIT_RESULT=PASS`; raw evidence is ignored, the boundary README is not ignored, and the empty project has zero commits and zero application source files.
+- Remote release evidence: [`v0.1.1` tag](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.1.1) and `refs/heads/main` both resolve to `f9367395e16af7a8acce57107087af8d3ae11b36`; Release ID `383184751` is published, and tag-triggered [Plugin Validation #189](https://github.com/kktbur/VibeCoding-Start/actions/runs/33955438453) plus [Standards Audit #234](https://github.com/kktbur/VibeCoding-Start/actions/runs/33955438540) passed.
+- M2 foundation scope is recorded in [Plan 005](plans/005-v0.2.0-m2-small-project.md) and [ADR-0005](decisions/0005-indexed-docs-as-cross-agent-contract.md); the README, example, Cross-Agent contract, and public-example test are in progress locally.
 
 ## Known limits
 
 - The E2E used a temporary local marketplace and temporary Plugin installation; both were removed after the test, while the local evidence was retained.
 - The first release intentionally does not include clean-room installation, Docker smoke testing, or release automation; those are deferred until real users and Issues provide evidence that they are needed.
-- Remote Actions are verified as passing for the M1 PR head and the merged `main` commit; the v0.1.0 release metadata remains valid and unchanged.
-- The v0.1.1 package is merged and ready for release, but its tag and GitHub Release have not been created because the current GitHub connector has no Release-creation write operation.
+- Remote Actions are verified as passing for the M1 PR head, the merged `main` commit, and the published `v0.1.1` tag; the v0.1.0 release metadata remains valid and unchanged.
+- The current GitHub connector still cannot create Release objects; the owner-created public Release was verified through GitHub API and the public release page.
 - The v0.1.0 Release metadata and tag target are valid; its body still contains historical pre-publication wording and should be cleaned up when Release-edit access is available.
 
 ## Next step
 
-Create the v0.1.1 tag and GitHub Release from `38d8c074a90a404ee6455d56693392e2f0eccd67` when an authenticated Release-write path is available, then start the M2 small-project path and example work.
+Finish M2 WP-20 through WP-23, obtain independent review, and publish only after the local acceptance checks pass. Keep clean-room installation, Docker smoke testing, release automation, and further scope behind a separate decision.
+

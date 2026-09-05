@@ -9,7 +9,7 @@ This is the canonical starting point for the repository. It separates active pro
 | [Project instructions](../AGENTS.md) | Repository rules, privacy boundary, and local checks | ACTIVE |
 | [Current state](CURRENT.md) | What is implemented, verified, and next | ACTIVE |
 | [Product](PRODUCT.md) | Why VibeCoding Start exists and who it serves | ACTIVE |
-| [PRD](PRD.md) | v0.1.1 requirements and non-goals | ACTIVE |
+| [PRD](PRD.md) | Released v0.1.1 baseline and active M2 requirements | ACTIVE |
 | [Acceptance](ACCEPTANCE.md) | Machine, owner, release, and recovery criteria | ACTIVE |
 
 ## Warm Knowledge
@@ -25,7 +25,9 @@ This is the canonical starting point for the repository. It separates active pro
 | Plans | [plans/INDEX.md](plans/INDEX.md) | Continuing staged work |
 | Worklog | [worklog/INDEX.md](worklog/INDEX.md) | Understanding recent changes |
 | Changelog | [CHANGELOG.md](../CHANGELOG.md) | Reviewing release differences |
+| Cross-Agent contract | [CROSS-AGENT.md](CROSS-AGENT.md) | Preparing a repository-local handoff between coding agents |
 | Public example | [Project memory example](examples/project-memory/README.md) | Explaining the local raw-memory boundary |
+| Small-project example | [Local File Renamer](examples/small-project/README.md) | Seeing the minimum project-document skeleton |
 
 ## Cold Archive Boundary
 
@@ -39,3 +41,4 @@ Task End → preserve local raw memory → update CURRENT / PRD / active docs
 ```
 
 Last reviewed: 2026-09-05
+
