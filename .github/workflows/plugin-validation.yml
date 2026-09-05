@@ -22,6 +22,8 @@ jobs:
         run: python tests/test_public_examples.py
       - name: Validate README language navigation
         run: python tests/test_readme_navigation.py
+      - name: Validate public governance documents
+        run: python tests/test_governance_docs.py
       - name: Validate small-project gate depth
         run: python tests/test_small_path_contract.py
       - name: Check active name consistency
@@ -32,4 +34,6 @@ jobs:
         run: python tests/check_line_endings.py .
       - name: Compile Skill helper scripts
         run: python -m compileall -q plugins/vibecoding-start/skills
+      - name: Run Unix check wrapper
+        run: bash scripts/check.sh
 
