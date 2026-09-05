@@ -53,6 +53,8 @@ pwsh -NoProfile -Command '& python "plugins\vibecoding-start\skills\vibecoding-p
 pwsh -NoProfile -Command '& python "plugins\vibecoding-start\skills\vibecoding-project-knowledge\scripts\detect_stale_docs.py" . --max-age-days 30'
 pwsh -NoProfile -Command '& python "tests\validate_plugin.py" "plugins\vibecoding-start" --marketplace ".agents\plugins\marketplace.json"'
 pwsh -NoProfile -Command '& python "tests\test_project_knowledge.py"'
+pwsh -NoProfile -Command '& python "tests\test_public_examples.py"'
+pwsh -NoProfile -Command '& python "tests\test_readme_navigation.py"'
 pwsh -NoProfile -Command '& python "tests\test_version_consistency.py"'
 pwsh -NoProfile -Command '& python "tests\check_version_consistency.py"'
 pwsh -NoProfile -Command '& python "tests\check_line_endings.py" .'
@@ -67,6 +69,8 @@ On macOS or Linux, run the equivalent checks from the repository root with Pytho
 ```sh
 python3 tests/validate_plugin.py plugins/vibecoding-start --marketplace .agents/plugins/marketplace.json
 python3 tests/test_project_knowledge.py
+python3 tests/test_public_examples.py
+python3 tests/test_readme_navigation.py
 python3 tests/test_version_consistency.py
 python3 tests/check_line_endings.py .
 python3 tests/check_name_drift.py .
@@ -81,3 +85,4 @@ python3 plugins/vibecoding-start/skills/vibecoding-project-knowledge/scripts/det
 - Review the diff against `docs/PRODUCT.md`, `docs/PRD.md`, `docs/ACCEPTANCE.md`, the active v1.3 standard, and active ADRs.
 - Flag scope drift, duplicated Skill sources, unjustified complexity, missing failure/recovery tests, secret exposure, stale documentation, broken links, name drift, and changes without a rollback path.
 - Treat a green automated check as evidence for that check only; do not convert it into a blanket correctness claim.
+
