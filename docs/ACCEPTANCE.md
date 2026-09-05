@@ -10,6 +10,8 @@
 - REQ-006: The README explains the product, installation shape, quick start, privacy boundary, compatibility, and license.
 - REQ-007: Release, rollback, backup, migration, acceptance, and observation status are recorded explicitly.
 - REQ-008: PowerShell 7 and Unix-like check commands are documented, and repository text files use the shared LF policy.
+- REQ-009: A redacted small-project example shows the required project-document skeleton without claiming an application implementation.
+- REQ-010: Cross-Agent usage notes define repository-local handoff fields, read order, change protocol, and the no-hidden-orchestrator boundary.
 
 ## Machine evidence
 
@@ -34,6 +36,8 @@
 - [x] The material REQ-008 change has a visible path from PRD to acceptance, deterministic checks, and the M1 worklog.
 - [x] Raw session data was not included in the empty project's Git index or commit history.
 - [x] The owner requested merge, tag, and Release after the listed E2E checks passed; the release record is maintained below.
+- [x] The owner published `v0.1.1`; the public tag, Release page, target commit, and tag-triggered CI are verified below.
+- [x] The owner explicitly authorized M2 continuation without treating the work as external-user feedback.
 
 ## E2E evidence
 
@@ -42,6 +46,10 @@
 - [x] The final audit passed document structure, repository-relative links, freshness, and the `.project-memory` boundary.
 - [x] The raw E2E record is retained locally under `.project-memory/e2e/` and is intentionally excluded from the public Git tree.
 - [x] The tested empty project remained on `main` with zero commits, zero indexed files, and zero application source files.
+- [x] The public small-project example contains the required skeleton and is validated as documentation-only.
+- [x] The Cross-Agent contract documents read order, handoff fields, change protocol, evidence boundary, and its non-orchestrator scope.
+- [x] The English-first/Chinese-second README uses stable GitHub custom anchors and pins the stable installation command to `v0.1.1`.
+- [ ] The owner accepts the rendered bilingual README and the M2 example/handoff documentation on the public repository.
 
 ## Failure and recovery
 
@@ -54,14 +62,16 @@
 
 ## Release record
 
-- Version: `0.1.1` (M1 merged; G8 tag/Release pending)
-- Last known good: public `v0.1.0` tag at merge commit `48a14a895a8a71ded7fc2927a8a92db1c7bc302f`.
+- Version: `0.1.1` (M1 merged; G8 tag/Release COMPLETE; G9 observation open)
+- Last known good: public [`v0.1.1` tag](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.1.1) at commit `f9367395e16af7a8acce57107087af8d3ae11b36`; the public `v0.1.0` tag at `48a14a895a8a71ded7fc2927a8a92db1c7bc302f` remains the previous rollback package.
 - Backup/snapshot: remote `main` commit `0b570c1` and local `main` commit `837cf49` are retained as recoverable pre-refactor states.
 - Release notes: [Plan 003 release notes](plans/003-v0.1.0-refactor.md#release-notes)
-- M1 release notes: [Plan 004](plans/004-v0.1.1-improvement.md)
+- M1 release notes: [Plan 004](plans/004-v0.1.1-improvement.md) and the [v0.1.1 GitHub Release](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.1.1)
 - Previous release: [v0.1.0 GitHub Release](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.1.0)
 - Rollback: revert the merged M1 PR/commit to restore the v0.1.0 package; retain the v1.2 commit as an earlier recovery snapshot and do not rewrite history by default.
 - Migration note: consumers move from the old repository-local path to the installed `vibecoding-start` Plugin.
 - Merge evidence: PR #1 was squash-merged into `main` at commit `48a14a895a8a71ded7fc2927a8a92db1c7bc302f`; PR #2 was squash-merged at `38d8c074a90a404ee6455d56693392e2f0eccd67`; post-merge M1 CI runs [#184](https://github.com/kktbur/VibeCoding-Start/actions/runs/33953806721) and [#229](https://github.com/kktbur/VibeCoding-Start/actions/runs/33953806729) passed.
-- Tag/Release status: `v0.1.0` is published and points to merge commit `48a14a8…`; v0.1.1 is merged and package-ready, but its tag/Release remains pending an authenticated Release-write path.
-- Owner acceptance: the requested release condition was satisfied by the E2E checklist; optional manual product review remains a separate observation activity.
+- Release closeout evidence: public `main` and `v0.1.1` both resolve to `f9367395e16af7a8acce57107087af8d3ae11b36`; tag-triggered [Plugin Validation #189](https://github.com/kktbur/VibeCoding-Start/actions/runs/33955438453) and [Standards Audit #234](https://github.com/kktbur/VibeCoding-Start/actions/runs/33955438540) passed.
+- Tag/Release status: `v0.1.1` is published as [VibeCoding Start v0.1.1](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.1.1), non-draft and non-prerelease, targeting `main`.
+- Owner acceptance: the requested release condition was satisfied by the E2E checklist; M2 is owner-directed continuation, while optional manual product review and real-user observation remain separate activities.
+
