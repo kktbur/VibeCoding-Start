@@ -9,7 +9,7 @@ This is the canonical starting point for the repository. It separates active pro
 | [Project instructions](../AGENTS.md) | Repository rules, privacy boundary, and local checks | ACTIVE |
 | [Current state](CURRENT.md) | What is implemented, verified, and next | ACTIVE |
 | [Product](PRODUCT.md) | Why VibeCoding Start exists and who it serves | ACTIVE |
-| [PRD](PRD.md) | Released v0.1.1 baseline and v0.2.0 candidate requirements | ACTIVE |
+| [PRD](PRD.md) | Released v0.2.0 baseline and v0.3.0 governance candidate requirements | ACTIVE |
 | [Acceptance](ACCEPTANCE.md) | Machine, owner, release, and recovery criteria | ACTIVE |
 
 ## Warm Knowledge
@@ -26,6 +26,9 @@ This is the canonical starting point for the repository. It separates active pro
 | Worklog | [worklog/INDEX.md](worklog/INDEX.md) | Understanding recent changes |
 | Changelog | [CHANGELOG.md](../CHANGELOG.md) | Reviewing release differences |
 | Cross-Agent contract | [CROSS-AGENT.md](CROSS-AGENT.md) | Preparing a repository-local handoff between coding agents |
+| Chinese user README | [README.zh-CN.md](../README.zh-CN.md) | Serving Chinese-speaking users |
+| Contributing guide | [CONTRIBUTING.md](../CONTRIBUTING.md) | Preparing a contribution |
+| Security policy | [SECURITY.md](../SECURITY.md) | Reporting a vulnerability |
 | Public example | [Project memory example](examples/project-memory/README.md) | Explaining the local raw-memory boundary |
 | Small-project example | [Local File Renamer](examples/small-project/README.md) | Seeing the minimum project-document skeleton |
 
