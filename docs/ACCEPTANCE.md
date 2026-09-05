@@ -62,7 +62,7 @@
 - [x] The owner accepts the rendered bilingual README and the M2 example/handoff documentation on the public repository by authorizing continuation after the public merge.
 - [x] The owner authorizes the Small-project gate-depth and v0.2.0 release-candidate continuation.
 - [x] The v0.2.0 candidate was separately closed: PR #5 merged, `main` and `v0.2.0` resolve to the same commit, the Release is published, and tag-triggered CI passed.
-- [ ] The owner accepts the rendered v0.3.0 Chinese README and governance templates after the candidate PR is opened.
+- [ ] The owner accepts the rendered v0.3.0 Chinese README and governance templates on [PR #6](https://github.com/kktbur/VibeCoding-Start/pull/6).
 
 ## Failure and recovery
 
@@ -91,6 +91,6 @@
 - v0.2.0 merge evidence: [PR #5](https://github.com/kktbur/VibeCoding-Start/pull/5) merged at `994b121e1cff0b7eb514ce03ea79b83766d28c28`; `refs/heads/main` and `refs/tags/v0.2.0` both resolve to that commit.
 - v0.2.0 Release evidence: [VibeCoding Start v0.2.0](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.2.0) is Release ID `383238263`, published, non-draft, and non-prerelease.
 - v0.2.0 tag-triggered CI: [Plugin Validation](https://github.com/kktbur/VibeCoding-Start/actions/runs/33965703200) and [Standards Audit](https://github.com/kktbur/VibeCoding-Start/actions/runs/33965703206) completed with conclusion `success` for tag `v0.2.0` at the release commit.
-- Owner acceptance: the owner confirmed the v0.2.0 Release and authorized the owner-directed v0.3.0 M3 candidate; rendered acceptance of the new governance files remains pending the candidate PR.
+- Owner acceptance: the owner confirmed the v0.2.0 Release and authorized the owner-directed v0.3.0 M3 candidate; rendered acceptance of the new governance files remains pending on PR #6.
 - Historical v0.2.0 candidate review evidence: [PR #5](https://github.com/kktbur/VibeCoding-Start/pull/5) was reviewed at head `fa1a1209fc3f2fb713b9ff3f7d9381e9ea85c5c5`; [Plugin Validation PR](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962069628), [Standards Audit PR](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962069831), [Plugin Validation push](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962047841), and [Standards Audit push](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962047900) all passed before the merge.
-- v0.3.0 candidate evidence: local governance implementation and full checks are pending independent review; no remote PR, tag, or Release is claimed yet.
+- v0.3.0 candidate evidence: [PR #6](https://github.com/kktbur/VibeCoding-Start/pull/6) is open at head `77fc8459966fbf54629bcb8b9190c97a551ae76b`; remote [Plugin Validation](https://github.com/kktbur/VibeCoding-Start/actions/runs/33968914437) and [Standards Audit](https://github.com/kktbur/VibeCoding-Start/actions/runs/33968914435) both concluded `success`. The fresh-session E2E remains pending, and no v0.3.0 merge, tag, or Release is claimed.
