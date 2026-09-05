@@ -30,6 +30,7 @@
 - [x] Active package and public documentation contain no old invocation names or duplicate Skill source paths.
 - [x] `.project-memory` raw records are not tracked except for its boundary `README.md`.
 - [x] The target GitHub repository's `release/v0.1.0` branch contains the current Plugin package and the README after publication.
+- [x] The v0.2.0 candidate's local full gate run and independent standards/spec reviews pass; PR #5 remote Plugin Validation and Standards Audit pass for both push and pull_request events.
 
 ## Owner evidence
 
@@ -54,6 +55,7 @@
 - [x] The English-first/Chinese-second README uses stable GitHub custom anchors and pins the stable installation command to `v0.1.1`.
 - [x] The owner accepts the rendered bilingual README and the M2 example/handoff documentation on the public repository by authorizing continuation after the public merge.
 - [x] The owner authorizes the Small-project gate-depth and v0.2.0 release-candidate continuation.
+- [x] The candidate remains separately bounded: PR #5 is open and unmerged, `main` remains at the M2 merge commit, and no `v0.2.0` tag or Release is claimed.
 
 ## Failure and recovery
 
@@ -79,4 +81,5 @@
 - Tag/Release status: `v0.1.1` is published as [VibeCoding Start v0.1.1](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.1.1), non-draft and non-prerelease, targeting `main`.
 - M2 merge evidence: [PR #4](https://github.com/kktbur/VibeCoding-Start/pull/4) merged at `496e12b2705e1a9e67272c1f475987ea85850770`; post-merge [Plugin Validation](https://github.com/kktbur/VibeCoding-Start/actions/runs/33959750140) and [Standards Audit](https://github.com/kktbur/VibeCoding-Start/actions/runs/33959750176) passed.
 - Owner acceptance: the owner confirmed the rendered README correction by authorizing continuation; v0.2.0 release-candidate preparation remains separate from the not-yet-created tag and Release.
+- Candidate review evidence: [PR #5](https://github.com/kktbur/VibeCoding-Start/pull/5) is open at head `fa1a1209fc3f2fb713b9ff3f7d9381e9ea85c5c5`; [Plugin Validation PR](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962069628), [Standards Audit PR](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962069831), [Plugin Validation push](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962047841), and [Standards Audit push](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962047900) all passed.
 
