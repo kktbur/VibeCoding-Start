@@ -36,4 +36,3 @@
 | `.project-memory/README.md` | Local raw-memory publication boundary | Checking privacy rules |
 
 The active Skill source of truth is `plugins/vibecoding-start/skills/`. Do not recreate a second maintained copy under `.agents/skills/`.
-
