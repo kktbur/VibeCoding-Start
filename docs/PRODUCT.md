@@ -23,6 +23,7 @@ VibeCoding Start should be a small, installable, reusable Codex Plugin that give
 - Local-first raw project memory with intentionally redacted public examples.
 - A compact small-project example and repository-local Cross-Agent handoff guidance.
 - Explicit gate-depth scaling so genuinely small projects keep the required skeleton without inheriting unnecessary Medium/Large ceremony.
+- A user-facing Chinese README plus repository-local contribution and security entry points that do not duplicate the normative English standard.
 - MIT licensing, a product-oriented README, deterministic package/document checks, and a GitHub Actions validation path.
 
 ## Non-goals
@@ -31,6 +32,7 @@ VibeCoding Start should be a small, installable, reusable Codex Plugin that give
 - Maintaining copied Skill sources under both `.agents/skills/` and the Plugin package.
 - Claiming that documentation or package checks prove an application is correct.
 - Publishing private raw sessions or automatically publishing future repository changes.
+- Maintaining a second normative translation of the active engineering standard.
 
 ## Risks
 
