@@ -94,4 +94,3 @@
 - Owner acceptance: the owner confirmed the v0.2.0 Release and authorized the owner-directed v0.3.0 M3 candidate; rendered acceptance of the new governance files remains pending the candidate PR.
 - Historical v0.2.0 candidate review evidence: [PR #5](https://github.com/kktbur/VibeCoding-Start/pull/5) was reviewed at head `fa1a1209fc3f2fb713b9ff3f7d9381e9ea85c5c5`; [Plugin Validation PR](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962069628), [Standards Audit PR](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962069831), [Plugin Validation push](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962047841), and [Standards Audit push](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962047900) all passed before the merge.
 - v0.3.0 candidate evidence: local governance implementation and full checks are pending independent review; no remote PR, tag, or Release is claimed yet.
-
