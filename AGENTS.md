@@ -2,7 +2,7 @@
 
 ## Project identity
 
-This repository is the source and public package for VibeCoding Start v0.1.1: a skill-only Codex Plugin containing `vibecoding-start` and `vibecoding-project-knowledge`. It turns the Vibe Engineering Development Standard into a reusable workflow for AI-built software projects.
+This repository is the source and public package for VibeCoding Start: a skill-only Codex Plugin containing `vibecoding-start` and `vibecoding-project-knowledge`. The public `v0.1.1` release is the last stable package; the next `v0.2.0` candidate adds the documented Small-project path without adding infrastructure.
 
 ## First-read order
 
@@ -55,6 +55,7 @@ pwsh -NoProfile -Command '& python "tests\validate_plugin.py" "plugins\vibecodin
 pwsh -NoProfile -Command '& python "tests\test_project_knowledge.py"'
 pwsh -NoProfile -Command '& python "tests\test_public_examples.py"'
 pwsh -NoProfile -Command '& python "tests\test_readme_navigation.py"'
+pwsh -NoProfile -Command '& python "tests\test_small_path_contract.py"'
 pwsh -NoProfile -Command '& python "tests\test_version_consistency.py"'
 pwsh -NoProfile -Command '& python "tests\check_version_consistency.py"'
 pwsh -NoProfile -Command '& python "tests\check_line_endings.py" .'
@@ -71,6 +72,7 @@ python3 tests/validate_plugin.py plugins/vibecoding-start --marketplace .agents/
 python3 tests/test_project_knowledge.py
 python3 tests/test_public_examples.py
 python3 tests/test_readme_navigation.py
+python3 tests/test_small_path_contract.py
 python3 tests/test_version_consistency.py
 python3 tests/check_line_endings.py .
 python3 tests/check_name_drift.py .

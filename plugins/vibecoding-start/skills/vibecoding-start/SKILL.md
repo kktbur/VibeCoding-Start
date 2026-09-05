@@ -7,6 +7,8 @@ description: "Apply a risk-scaled engineering workflow to AI-built software proj
 
 Use this Skill to give Codex a lightweight engineering system from the first project session through release and observation. The desired result is a project that a later session can understand, review, verify, accept, and safely continue without replaying the entire chat.
 
+Do not invoke this workflow for a typo-only README edit or a color-only UI edit when the project state, behavior, and acceptance surface do not change. Make that surgical edit directly and keep the project gates out of the task.
+
 ## First action
 
 Read the project's `AGENTS.md`, then follow this Hot Context order:
@@ -45,6 +47,29 @@ G0 Scope
 → G8 Release
 → G9 Observation
 ```
+
+### Scale the gates before applying them
+
+Choose the smallest depth that matches the risk. A small local tool can keep every gate short, but it must not skip the project-document skeleton or invent empty governance directories.
+
+| Gate | Small (local, offline, no persistence) | Medium | Large |
+|---|---|---|---|
+| G0 Scope | One sentence: application, not infrastructure | A paragraph | Explicit threat model |
+| G1 Intent | All six documents; each may be under 30 lines | PRD with REQ IDs | Complete scenarios and non-goals |
+| G2 Reuse | Search the standard library first; BUILD requires an ADR | ADR required | Compare multiple reuse paths |
+| G3 Plan | May combine the plan with `CURRENT.md` in five lines | Use `docs/plans/` | Milestone-level acceptance |
+| G4 Build | Small diff; no new framework | Clear module boundaries | Layered design |
+| G5 Review | Author checklist; independent reviewer (not the author) for material changes; owner reads the diff | Independent reviewer | Independent reviewer plus security review |
+| G6 Verify | One normal path and one failure path | Fixtures and regression checks | Recovery, boundary, and performance checks by risk |
+| G7 Accept | Owner can restate the behavior | Check `ACCEPTANCE.md` | Explicit sign-off |
+| G8 Release | Version, run instructions, last-known-good, release notes, backup/rollback, migration risk, and exact target | Backup and rollback | Migration plan |
+| G9 Observe | Confirm it still opens and runs next time | Logs and metrics | Alerts and operational ownership |
+
+For a Small project:
+
+- Still create `AGENTS.md`, `docs/INDEX.md`, `docs/PRODUCT.md`, `docs/PRD.md`, `docs/ACCEPTANCE.md`, `docs/CURRENT.md`, and `docs/CODEMAP.md`, even when each file is short.
+- Do not create empty `docs/architecture/`, `docs/incidents/`, `docs/operations/`, or similar directories merely to look complete.
+- Keep the implementation diff small, prefer the standard library, and record only decisions that affect reuse, behavior, acceptance, or rollback.
 
 ### G0 Scope
 
@@ -115,4 +140,6 @@ Do not claim completion without machine evidence, a human-readable explanation, 
 ## References
 
 - Read [Standard v1.3](../vibecoding-project-knowledge/references/standard-v1.3.md) for the normative rules and release boundary.
+- Read [scaling rules](../vibecoding-project-knowledge/references/scaling-rules.md) for the concrete Small/Medium/Large document depth and artifact minimums.
 - Read the companion `vibecoding-project-knowledge` Skill for `INIT`, `UPDATE`, or `AUDIT` procedures.
+

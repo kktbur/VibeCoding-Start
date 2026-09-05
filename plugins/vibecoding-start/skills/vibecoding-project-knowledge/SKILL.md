@@ -7,6 +7,10 @@ description: "Initialize, update, and audit a project's indexed intent, PRD, acc
 
 Keep a project's active truth, decisions, structure, history, and acceptance navigable from one index without turning the workflow into a database or documentation platform.
 
+## Relationship to the main workflow
+
+`vibecoding-start` is the normal entry point and owns the G0-G9 engineering gates. This companion Skill owns the indexed-document lifecycle: `INIT`, `UPDATE`, and `AUDIT`. Use the [scaling rules](references/scaling-rules.md) with the main Skill's gate-depth matrix so a Small project keeps the required skeleton without inheriting Medium or Large documentation overhead.
+
 ## Operating boundary
 
 - Work inside the active project root. Preserve valid documentation and connect it from `docs/INDEX.md` instead of creating duplicate sources of truth.
@@ -73,3 +77,4 @@ Read only the supporting reference needed for the current mode:
 - `references/adr-rules.md` — when and how to create an ADR.
 - `references/session-memory.md` — raw history, redaction, promotion, and local-only defaults.
 - `references/scaling-rules.md` — Small/Medium/Large depth and gate strength.
+

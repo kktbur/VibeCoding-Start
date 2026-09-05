@@ -1,7 +1,7 @@
 # Worklog: M2 Foundation
 
 - Date: 2026-09-05
-- Status: IN PROGRESS — owner-directed continuation after v0.1.1
+- Status: COMPLETE — merged through PR #4; release-candidate closeout continues under Plan 006
 - Plan: [Plan 005](../plans/005-v0.2.0-m2-small-project.md)
 
 ## Scope
@@ -29,4 +29,8 @@ Start the next planned development phase after the public v0.1.1 Release. The ow
 ## Verification target
 
 Run the existing document, link, freshness, package, version, line-ending, name-drift, compilation, and test checks after the M2 foundation is implemented. Request independent review before publication.
+
+## Result
+
+M2 WP-20 through WP-23 were implemented, independently reviewed, passed local and remote checks, and merged through [PR #4](https://github.com/kktbur/VibeCoding-Start/pull/4). The owner then confirmed the public README correction and authorized the next release-candidate phase.
 

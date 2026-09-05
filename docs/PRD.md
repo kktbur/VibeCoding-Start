@@ -1,8 +1,8 @@
 # PRD
 
-- Status: ACTIVE — v0.1.1 released; M2 in progress
+- Status: ACTIVE — M2 foundation merged; v0.2.0 release candidate in preparation
 - Release baseline: `v0.1.1`
-- Next milestone: `v0.2.0` M2
+- Next milestone: `v0.2.0`
 - Product: VibeCoding Start Skill-only Plugin
 
 ## Problem
@@ -23,6 +23,7 @@ The previous repository package worked as a repository-local Skill but did not y
 4. Raw sessions and machine output remain local while durable knowledge and redacted examples remain safe to publish.
 5. A contributor can run deterministic checks and receive a clear failure when the PRD, package manifest, links, names, or fixtures are broken.
 6. A user or another coding agent can use the compact small-project example and the Cross-Agent handoff notes without relying on hidden chat state.
+7. A user starting a genuinely small local tool can understand the minimum gate depth without creating empty Large-project directories.
 
 ## Functional requirements
 
@@ -65,6 +66,10 @@ The M2 milestone MUST provide a compact, fully redacted example that shows `AGEN
 ### REQ-010 — Cross-Agent handoff
 
 The M2 milestone MUST document a repository-local handoff contract with a read order, required handoff fields, change protocol, evidence boundary, and an explicit statement that no hidden-memory or runtime-orchestrator capability is provided.
+
+### REQ-011 — Small-project gate depth
+
+The v0.2.0 milestone MUST document a concrete Small/Medium/Large gate-depth matrix. A Small project MUST still receive the seven-file project skeleton, but MUST NOT receive empty architecture, operations, incident, or other governance directories merely to look complete.
 
 ## Non-goals
 

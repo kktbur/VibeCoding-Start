@@ -13,7 +13,10 @@
 - REQ-009: A redacted small-project example shows the required project-document skeleton without claiming an application implementation.
 - REQ-010: Cross-Agent usage notes define repository-local handoff fields, read order, change protocol, and the no-hidden-orchestrator boundary.
 
+- REQ-011: The main Skill and scaling reference define Small/Medium/Large gate depth and preserve the Small-project skeleton without empty governance directories.
+
 ## Machine evidence
+
 
 - [x] Required project-document audit passes and requires `docs/PRD.md`.
 - [x] Repository-relative link audit passes on curated files.
@@ -27,6 +30,7 @@
 - [x] Active package and public documentation contain no old invocation names or duplicate Skill source paths.
 - [x] `.project-memory` raw records are not tracked except for its boundary `README.md`.
 - [x] The target GitHub repository's `release/v0.1.0` branch contains the current Plugin package and the README after publication.
+- [x] The v0.2.0 candidate's local full gate run and independent standards/spec reviews pass; PR #5 remote Plugin Validation and Standards Audit pass for both push and pull_request events.
 
 ## Owner evidence
 
@@ -49,7 +53,9 @@
 - [x] The public small-project example contains the required skeleton and is validated as documentation-only.
 - [x] The Cross-Agent contract documents read order, handoff fields, change protocol, evidence boundary, and its non-orchestrator scope.
 - [x] The English-first/Chinese-second README uses stable GitHub custom anchors and pins the stable installation command to `v0.1.1`.
-- [ ] The owner accepts the rendered bilingual README and the M2 example/handoff documentation on the public repository.
+- [x] The owner accepts the rendered bilingual README and the M2 example/handoff documentation on the public repository by authorizing continuation after the public merge.
+- [x] The owner authorizes the Small-project gate-depth and v0.2.0 release-candidate continuation.
+- [x] The candidate remains separately bounded: PR #5 is open and unmerged, `main` remains at the M2 merge commit, and no `v0.2.0` tag or Release is claimed.
 
 ## Failure and recovery
 
@@ -62,16 +68,18 @@
 
 ## Release record
 
-- Version: `0.1.1` (M1 merged; G8 tag/Release COMPLETE; G9 observation open)
+- Version: `0.2.0` candidate (M2 merged; package preparation in progress; no `v0.2.0` tag or Release yet)
 - Last known good: public [`v0.1.1` tag](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.1.1) at commit `f9367395e16af7a8acce57107087af8d3ae11b36`; the public `v0.1.0` tag at `48a14a895a8a71ded7fc2927a8a92db1c7bc302f` remains the previous rollback package.
 - Backup/snapshot: remote `main` commit `0b570c1` and local `main` commit `837cf49` are retained as recoverable pre-refactor states.
 - Release notes: [Plan 003 release notes](plans/003-v0.1.0-refactor.md#release-notes)
 - M1 release notes: [Plan 004](plans/004-v0.1.1-improvement.md) and the [v0.1.1 GitHub Release](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.1.1)
 - Previous release: [v0.1.0 GitHub Release](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.1.0)
-- Rollback: revert the merged M1 PR/commit to restore the v0.1.0 package; retain the v1.2 commit as an earlier recovery snapshot and do not rewrite history by default.
+- Rollback: for the v0.2.0 candidate, revert the candidate PR/commit and retain the public v0.1.1 tag as the last-known-good rollback package; keep v0.1.0 as an earlier recovery package and do not rewrite history by default.
 - Migration note: consumers move from the old repository-local path to the installed `vibecoding-start` Plugin.
 - Merge evidence: PR #1 was squash-merged into `main` at commit `48a14a895a8a71ded7fc2927a8a92db1c7bc302f`; PR #2 was squash-merged at `38d8c074a90a404ee6455d56693392e2f0eccd67`; post-merge M1 CI runs [#184](https://github.com/kktbur/VibeCoding-Start/actions/runs/33953806721) and [#229](https://github.com/kktbur/VibeCoding-Start/actions/runs/33953806729) passed.
 - Release closeout evidence: public `main` and `v0.1.1` both resolve to `f9367395e16af7a8acce57107087af8d3ae11b36`; tag-triggered [Plugin Validation #189](https://github.com/kktbur/VibeCoding-Start/actions/runs/33955438453) and [Standards Audit #234](https://github.com/kktbur/VibeCoding-Start/actions/runs/33955438540) passed.
 - Tag/Release status: `v0.1.1` is published as [VibeCoding Start v0.1.1](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.1.1), non-draft and non-prerelease, targeting `main`.
-- Owner acceptance: the requested release condition was satisfied by the E2E checklist; M2 is owner-directed continuation, while optional manual product review and real-user observation remain separate activities.
+- M2 merge evidence: [PR #4](https://github.com/kktbur/VibeCoding-Start/pull/4) merged at `496e12b2705e1a9e67272c1f475987ea85850770`; post-merge [Plugin Validation](https://github.com/kktbur/VibeCoding-Start/actions/runs/33959750140) and [Standards Audit](https://github.com/kktbur/VibeCoding-Start/actions/runs/33959750176) passed.
+- Owner acceptance: the owner confirmed the rendered README correction by authorizing continuation; v0.2.0 release-candidate preparation remains separate from the not-yet-created tag and Release.
+- Candidate review evidence: [PR #5](https://github.com/kktbur/VibeCoding-Start/pull/5) is open at head `fa1a1209fc3f2fb713b9ff3f7d9381e9ea85c5c5`; [Plugin Validation PR](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962069628), [Standards Audit PR](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962069831), [Plugin Validation push](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962047841), and [Standards Audit push](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962047900) all passed.
 

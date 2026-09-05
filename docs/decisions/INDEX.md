@@ -7,6 +7,7 @@
 | [ADR-0003](0003-package-plugin-and-rename-skills.md) | ACTIVE | Use one Skill-only Plugin source of truth and unified names |
 | [ADR-0004](0004-local-first-raw-memory.md) | ACTIVE | Keep raw project memory local by default |
 | [ADR-0005](0005-indexed-docs-as-cross-agent-contract.md) | ACTIVE | Use indexed project documents as the Cross-Agent handoff contract |
+| [ADR-0006](0006-small-project-gate-depth-and-release-boundary.md) | ACTIVE | Define Small-project gate depth and keep package/release checkpoints separate |
 
 Create another ADR only when a material architecture, security, dependency, publication, or release decision is made.
 
