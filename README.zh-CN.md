@@ -105,4 +105,3 @@ I want to build a small local file-renaming tool.
 ## License
 
 MIT。参见 [LICENSE](LICENSE)。
-
