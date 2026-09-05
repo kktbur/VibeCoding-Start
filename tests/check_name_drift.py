@@ -11,6 +11,14 @@ from pathlib import Path
 ACTIVE_FILES = (
     "AGENTS.md",
     "README.md",
+    "README.zh-CN.md",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "scripts/check.sh",
+    ".github/PULL_REQUEST_TEMPLATE.md",
+    ".github/ISSUE_TEMPLATE/bug-report.md",
+    ".github/ISSUE_TEMPLATE/skill-behavior.md",
+    ".github/ISSUE_TEMPLATE/documentation.md",
     "docs/INDEX.md",
     "docs/PRODUCT.md",
     "docs/PRD.md",
@@ -69,3 +77,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+
