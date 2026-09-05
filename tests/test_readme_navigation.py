@@ -36,7 +36,7 @@ class ReadmeNavigationTests(unittest.TestCase):
         self.assertEqual(self.content.count(chinese_anchor), 1)
 
     def test_pinned_and_development_install_paths_are_explicit(self) -> None:
-        pinned = "codex plugin marketplace add https://github.com/kktbur/VibeCoding-Start --ref v0.1.1"
+        pinned = "codex plugin marketplace add https://github.com/kktbur/VibeCoding-Start --ref v0.2.0"
         development = "codex plugin marketplace add https://github.com/kktbur/VibeCoding-Start --ref main"
 
         self.assertEqual(self.content.count(pinned), 2)
