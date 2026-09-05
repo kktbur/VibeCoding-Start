@@ -86,10 +86,10 @@ The companion Skill manages `INIT`, `UPDATE`, and `AUDIT` for project knowledge.
 
 ## Installation
 
-Add this repository as a Codex plugin marketplace, then install the Plugin. The pinned release command below uses the published `v0.2.0`; use `main` only when you intentionally want the latest development state.
+Add this repository as a Codex plugin marketplace, then install the Plugin. The pinned release command below uses the published `v0.3.0`; use `main` only when you intentionally want the latest development state.
 
 ```bash
-codex plugin marketplace add https://github.com/kktbur/VibeCoding-Start --ref v0.2.0
+codex plugin marketplace add https://github.com/kktbur/VibeCoding-Start --ref v0.3.0
 codex plugin add vibecoding-start@kktbur
 ```
 
@@ -230,10 +230,10 @@ plugins/vibecoding-start/
 
 ## 安装
 
-先把这个仓库添加为 Codex Plugin marketplace，再安装 Plugin。下面的固定版本命令使用已经发布的 `v0.2.0`；只有在你明确需要最新开发状态时，才使用 `main`。
+先把这个仓库添加为 Codex Plugin marketplace，再安装 Plugin。下面的固定版本命令使用已经发布的 `v0.3.0`；只有在你明确需要最新开发状态时，才使用 `main`。
 
 ```bash
-codex plugin marketplace add https://github.com/kktbur/VibeCoding-Start --ref v0.2.0
+codex plugin marketplace add https://github.com/kktbur/VibeCoding-Start --ref v0.3.0
 codex plugin add vibecoding-start@kktbur
 ```
 
@@ -293,3 +293,4 @@ docs/
 ## License
 
 MIT。参见 [LICENSE](LICENSE)。
+

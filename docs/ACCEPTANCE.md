@@ -48,6 +48,7 @@
 - [x] The owner published `v0.1.1`; the public tag, Release page, target commit, and tag-triggered CI are verified below.
 - [x] The owner explicitly authorized M2 continuation without treating the work as external-user feedback.
 - [x] The owner confirmed that `v0.2.0` was published and authorized the owner-directed M3 continuation.
+- [x] The owner accepted the v0.3.0 governance surface by merging PR #6 and publishing the v0.3.0 Tag and GitHub Release.
 
 ## E2E evidence
 
@@ -58,11 +59,11 @@
 - [x] The tested empty project remained on `main` with zero commits, zero indexed files, and zero application source files.
 - [x] The public small-project example contains the required skeleton and is validated as documentation-only.
 - [x] The Cross-Agent contract documents read order, handoff fields, change protocol, evidence boundary, and its non-orchestrator scope.
-- [x] The English-first/Chinese-second README uses stable GitHub custom anchors and pins the stable installation command to the published `v0.2.0` release; it links the dedicated Chinese README.
+- [x] The English-first/Chinese-second README uses stable GitHub custom anchors and pins the stable installation command to the published `v0.3.0` release; it links the dedicated Chinese README.
 - [x] The owner accepts the rendered bilingual README and the M2 example/handoff documentation on the public repository by authorizing continuation after the public merge.
 - [x] The owner authorizes the Small-project gate-depth and v0.2.0 release-candidate continuation.
 - [x] The v0.2.0 candidate was separately closed: PR #5 merged, `main` and `v0.2.0` resolve to the same commit, the Release is published, and tag-triggered CI passed.
-- [ ] The owner accepts the rendered v0.3.0 Chinese README and governance templates on [PR #6](https://github.com/kktbur/VibeCoding-Start/pull/6).
+- [x] The owner accepts the rendered v0.3.0 Chinese README and governance templates by merging [PR #6](https://github.com/kktbur/VibeCoding-Start/pull/6) and publishing the v0.3.0 Release.
 
 ## Failure and recovery
 
@@ -76,13 +77,15 @@
 
 ## Release record
 
-- Version: `0.3.0` candidate (M3 governance surface in preparation; no `v0.3.0` tag or Release yet)
-- Last known good: public [`v0.2.0` tag](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.2.0) at commit `994b121e1cff0b7eb514ce03ea79b83766d28c28`; the public `v0.1.1` tag at `f9367395e16af7a8acce57107087af8d3ae11b36` remains the previous rollback package.
+- Version: `0.3.0` released (M3 governance surface complete; G9 observation open)
+- Last known good: public [`v0.3.0` tag](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.3.0) at commit `52e8ade648b56fd92d1dd34e2a19a3030ea6a37a`; the public `v0.2.0` tag at `994b121e1cff0b7eb514ce03ea79b83766d28c28` remains the previous rollback package.
 - Backup/snapshot: remote `main` commit `0b570c1` and local `main` commit `837cf49` are retained as recoverable pre-refactor states.
 - Release notes: [Plan 003 release notes](plans/003-v0.1.0-refactor.md#release-notes)
 - M1 release notes: [Plan 004](plans/004-v0.1.1-improvement.md) and the [v0.1.1 GitHub Release](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.1.1)
 - Previous release: [v0.1.0 GitHub Release](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.1.0)
-- Rollback: for the v0.3.0 candidate, revert the candidate PR/commit and retain the public v0.2.0 tag as the last-known-good rollback package; keep v0.1.1 and v0.1.0 as earlier recovery packages and do not rewrite history by default.
+- M3 release: [VibeCoding Start v0.3.0](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.3.0), Release ID `383280538`, is published, non-draft, and non-prerelease; `refs/heads/main` and `refs/tags/v0.3.0` both resolve to `52e8ade648b56fd92d1dd34e2a19a3030ea6a37a`.
+- M3 tag-triggered CI: [Plugin Validation](https://github.com/kktbur/VibeCoding-Start/actions/runs/33973797062) and [Standards Audit](https://github.com/kktbur/VibeCoding-Start/actions/runs/33973797101) completed with conclusion `success` for `v0.3.0`.
+- Rollback: retain the public `v0.2.0` tag as the previous last-known-good rollback package; keep `v0.1.1` and `v0.1.0` as earlier recovery packages and do not rewrite history by default.
 - Migration note: consumers move from the old repository-local path to the installed `vibecoding-start` Plugin.
 - Merge evidence: PR #1 was squash-merged into `main` at commit `48a14a895a8a71ded7fc2927a8a92db1c7bc302f`; PR #2 was squash-merged at `38d8c074a90a404ee6455d56693392e2f0eccd67`; post-merge M1 CI runs [#184](https://github.com/kktbur/VibeCoding-Start/actions/runs/33953806721) and [#229](https://github.com/kktbur/VibeCoding-Start/actions/runs/33953806729) passed.
 - Release closeout evidence: public `main` and `v0.1.1` both resolve to `f9367395e16af7a8acce57107087af8d3ae11b36`; tag-triggered [Plugin Validation #189](https://github.com/kktbur/VibeCoding-Start/actions/runs/33955438453) and [Standards Audit #234](https://github.com/kktbur/VibeCoding-Start/actions/runs/33955438540) passed.
@@ -91,7 +94,7 @@
 - v0.2.0 merge evidence: [PR #5](https://github.com/kktbur/VibeCoding-Start/pull/5) merged at `994b121e1cff0b7eb514ce03ea79b83766d28c28`; `refs/heads/main` and `refs/tags/v0.2.0` both resolve to that commit.
 - v0.2.0 Release evidence: [VibeCoding Start v0.2.0](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.2.0) is Release ID `383238263`, published, non-draft, and non-prerelease.
 - v0.2.0 tag-triggered CI: [Plugin Validation](https://github.com/kktbur/VibeCoding-Start/actions/runs/33965703200) and [Standards Audit](https://github.com/kktbur/VibeCoding-Start/actions/runs/33965703206) completed with conclusion `success` for tag `v0.2.0` at the release commit.
-- Owner acceptance: the owner confirmed the v0.2.0 Release and authorized the owner-directed v0.3.0 M3 candidate; rendered acceptance of the new governance files remains pending on PR #6.
+- Owner acceptance: the owner confirmed the v0.2.0 Release, authorized the owner-directed v0.3.0 M3 candidate, merged PR #6, and published the v0.3.0 Release.
 - Historical v0.2.0 candidate review evidence: [PR #5](https://github.com/kktbur/VibeCoding-Start/pull/5) was reviewed at head `fa1a1209fc3f2fb713b9ff3f7d9381e9ea85c5c5`; [Plugin Validation PR](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962069628), [Standards Audit PR](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962069831), [Plugin Validation push](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962047841), and [Standards Audit push](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962047900) all passed before the merge.
-- v0.3.0 candidate evidence: [PR #6](https://github.com/kktbur/VibeCoding-Start/pull/6) remains open and its recorded remote [Plugin Validation](https://github.com/kktbur/VibeCoding-Start/actions/runs/33969319745) plus [Standards Audit](https://github.com/kktbur/VibeCoding-Start/actions/runs/33969319667) concluded `success`. The fresh-session E2E now passes in the local isolated retry; no v0.3.0 merge, tag, or Release is claimed.
+- v0.3.0 release evidence: [PR #6](https://github.com/kktbur/VibeCoding-Start/pull/6) merged at `52e8ade648b56fd92d1dd34e2a19a3030ea6a37a`; post-merge [Plugin Validation](https://github.com/kktbur/VibeCoding-Start/actions/runs/33973384661) and [Standards Audit](https://github.com/kktbur/VibeCoding-Start/actions/runs/33973384653) passed. The public [v0.3.0 Tag and Release](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.3.0) target the same commit, and tag-triggered [Plugin Validation](https://github.com/kktbur/VibeCoding-Start/actions/runs/33973797062) plus [Standards Audit](https://github.com/kktbur/VibeCoding-Start/actions/runs/33973797101) concluded `success`.
 

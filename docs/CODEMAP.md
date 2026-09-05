@@ -5,7 +5,7 @@
 | `AGENTS.md` | Repository instructions, privacy boundary, and local checks | Starting any task |
 | `docs/INDEX.md` | Canonical project knowledge navigation | Finding the right document |
 | `docs/PRODUCT.md` | Product intent, scope, and non-goals | Clarifying why this exists |
-| `docs/PRD.md` | Released v0.2.0 baseline and v0.3.0 governance candidate requirements | Checking what must be delivered |
+| `docs/PRD.md` | Released v0.3.0 baseline and post-release observation requirements | Checking what must be delivered |
 | `docs/ACCEPTANCE.md` | Machine, owner, release, and recovery criteria | Checking proof and readiness |
 | `docs/CURRENT.md` | Active state, limits, evidence, and next step | Resuming work |
 | `docs/standards/` | Active v1.3 standard and superseded v1.2 history | Checking normative rules |
@@ -30,9 +30,10 @@
 | `tests/check_line_endings.py` | Tracked text-file LF contract | Checking cross-platform formatting |
 | `tests/test_public_examples.py` | Small-project example skeleton check | Verifying the M2 public example |
 | `tests/test_readme_navigation.py` | English-first bilingual README contract | Verifying language anchors and install paths |
-| `tests/test_governance_docs.py` | Public governance file, language, template, and privacy contract | Verifying the v0.3.0 candidate |
+| `tests/test_governance_docs.py` | Public governance file, language, template, and privacy contract | Verifying the v0.3.0 release surface |
 | `tests/test_small_path_contract.py` | Small-project gate-depth contract | Verifying the M2 shortest path documentation |
 | `tests/fixtures/` | Standard-library validation fixtures, including Chinese and ignore-rule variants | Running deterministic tests |
 | `.project-memory/README.md` | Local raw-memory publication boundary | Checking privacy rules |
 
 The active Skill source of truth is `plugins/vibecoding-start/skills/`. Do not recreate a second maintained copy under `.agents/skills/`.
+

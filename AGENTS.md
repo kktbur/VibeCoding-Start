@@ -2,7 +2,7 @@
 
 ## Project identity
 
-This repository is the source and public package for VibeCoding Start: a skill-only Codex Plugin containing `vibecoding-start` and `vibecoding-project-knowledge`. The published `v0.2.0` release is the current stable package; the `v0.3.0` candidate adds user-facing Chinese guidance and public contribution/security entry points without adding infrastructure.
+This repository is the source and public package for VibeCoding Start: a skill-only Codex Plugin containing `vibecoding-start` and `vibecoding-project-knowledge`. The published `v0.3.0` release is the current stable package; `v0.2.0` remains the previous rollback package. The `v0.3.0` release adds user-facing Chinese guidance and public contribution/security entry points without adding infrastructure.
 
 ## First-read order
 
@@ -91,3 +91,4 @@ python3 plugins/vibecoding-start/skills/vibecoding-project-knowledge/scripts/det
 - Review the diff against `docs/PRODUCT.md`, `docs/PRD.md`, `docs/ACCEPTANCE.md`, the active v1.3 standard, and active ADRs.
 - Flag scope drift, duplicated Skill sources, unjustified complexity, missing failure/recovery tests, secret exposure, stale documentation, broken links, name drift, and changes without a rollback path.
 - Treat a green automated check as evidence for that check only; do not convert it into a blanket correctness claim.
+

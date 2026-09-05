@@ -9,7 +9,7 @@ This is the canonical starting point for the repository. It separates active pro
 | [Project instructions](../AGENTS.md) | Repository rules, privacy boundary, and local checks | ACTIVE |
 | [Current state](CURRENT.md) | What is implemented, verified, and next | ACTIVE |
 | [Product](PRODUCT.md) | Why VibeCoding Start exists and who it serves | ACTIVE |
-| [PRD](PRD.md) | Released v0.2.0 baseline and v0.3.0 governance candidate requirements | ACTIVE |
+| [PRD](PRD.md) | Released v0.3.0 baseline and post-release observation requirements | ACTIVE |
 | [Acceptance](ACCEPTANCE.md) | Machine, owner, release, and recovery criteria | ACTIVE |
 
 ## Warm Knowledge
@@ -44,3 +44,4 @@ Task End → preserve local raw memory → update CURRENT / PRD / active docs
 ```
 
 Last reviewed: 2026-09-05
+

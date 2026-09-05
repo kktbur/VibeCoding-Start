@@ -1,8 +1,8 @@
 # PRD
 
-- Status: ACTIVE — `v0.2.0` released; v0.3.0 M3 ecosystem and governance candidate in preparation
-- Release baseline: `v0.2.0`
-- Next milestone: `v0.3.0`
+- Status: RELEASED — `v0.3.0` released; post-release observation is open
+- Release baseline: `v0.3.0`
+- Next milestone: G9 observation and first-user feedback
 - Product: VibeCoding Start Skill-only Plugin
 
 ## Problem
@@ -90,7 +90,7 @@ The v0.3.0 milestone MUST provide `SECURITY.md` with a private vulnerability-rep
 - Rewriting public Git history when no confirmed secret exposure requires it.
 - Treating static validation as a substitute for a fresh-session installation test or owner acceptance.
 - Translating the entire engineering standard or creating a second normative standard source.
-- Renaming the versioned standard file in the v0.3.0 governance candidate; that optional migration requires a separate decision and PR.
+- Renaming the versioned standard file in the v0.3.0 governance scope; that optional migration requires a separate decision and PR.
 
 ## Constraints
 
@@ -114,5 +114,6 @@ The v0.3.0 milestone MUST provide `SECURITY.md` with a private vulnerability-rep
 
 ## Open Questions
 
-- The contribution guide, security policy, and Issue/PR templates are now included in the v0.3.0 candidate; their rendered usability remains an owner-acceptance check.
+- The contribution guide, security policy, and Issue/PR templates are included in the released v0.3.0 governance surface; their rendered usability was accepted through the merge and Release checkpoints.
 - Which real-user feedback should determine follow-up improvements after the owner-directed v0.3.0 governance surface is released?
+

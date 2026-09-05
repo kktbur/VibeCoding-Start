@@ -48,8 +48,8 @@ class GovernanceDocumentTests(unittest.TestCase):
             self.chinese_readme,
             re.compile(r"英文.*standard-v1\.3\.md.*(?:规范|准)", re.IGNORECASE | re.DOTALL),
         )
-        self.assertIn("--ref v0.2.0", self.readme)
-        self.assertIn("--ref v0.2.0", self.chinese_readme)
+        self.assertIn("--ref v0.3.0", self.readme)
+        self.assertIn("--ref v0.3.0", self.chinese_readme)
 
     def test_contributor_and_security_boundaries_are_explicit(self) -> None:
         for content in (self.contributing, self.security, self.pr_template):
@@ -94,3 +94,4 @@ class GovernanceDocumentTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

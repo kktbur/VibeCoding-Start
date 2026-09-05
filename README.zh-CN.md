@@ -56,10 +56,10 @@ PRODUCT → PRD → ACCEPTANCE → Reuse → Plan
 
 ## 安装
 
-把仓库添加为 Codex Plugin marketplace，然后安装 Plugin。下面的命令固定到已经发布并验证过的 `v0.2.0`：
+把仓库添加为 Codex Plugin marketplace，然后安装 Plugin。下面的命令固定到已经发布并验证过的 `v0.3.0`：
 
 ```bash
-codex plugin marketplace add https://github.com/kktbur/VibeCoding-Start --ref v0.2.0
+codex plugin marketplace add https://github.com/kktbur/VibeCoding-Start --ref v0.3.0
 codex plugin add vibecoding-start@kktbur
 ```
 
@@ -105,3 +105,4 @@ I want to build a small local file-renaming tool.
 ## License
 
 MIT。参见 [LICENSE](LICENSE)。
+
