@@ -5,14 +5,15 @@
 | `AGENTS.md` | Repository instructions, privacy boundary, and local checks | Starting any task |
 | `docs/INDEX.md` | Canonical project knowledge navigation | Finding the right document |
 | `docs/PRODUCT.md` | Product intent, scope, and non-goals | Clarifying why this exists |
-| `docs/PRD.md` | v0.1.1 requirements and constraints | Checking what must be delivered |
+| `docs/PRD.md` | Released v0.1.1 baseline and active M2 requirements | Checking what must be delivered |
 | `docs/ACCEPTANCE.md` | Machine, owner, release, and recovery criteria | Checking proof and readiness |
 | `docs/CURRENT.md` | Active state, limits, evidence, and next step | Resuming work |
 | `docs/standards/` | Active v1.3 standard and superseded v1.2 history | Checking normative rules |
 | `docs/decisions/` | Material process and package decisions | Understanding why a choice was made |
 | `docs/plans/` | Staged implementation and release plan | Continuing the refactor |
 | `docs/worklog/` | Curated session summaries | Reviewing recent work |
-| `docs/examples/` | Redacted public examples | Explaining reusable patterns |
+| `docs/examples/` | Redacted public examples, including the small-project skeleton | Explaining reusable patterns |
+| `docs/CROSS-AGENT.md` | Repository-local handoff contract for coding agents | Resuming work in another agent |
 | `plugins/vibecoding-start/.codex-plugin/plugin.json` | Installable Plugin manifest | Validating distribution metadata |
 | `plugins/vibecoding-start/skills/vibecoding-start/` | Main workflow Skill and UI metadata | Applying G0-G9 |
 | `plugins/vibecoding-start/skills/vibecoding-project-knowledge/` | Companion INIT/UPDATE/AUDIT Skill, v1.3 reference, templates, and scripts | Maintaining project knowledge |
@@ -21,7 +22,10 @@
 | `.github/workflows/plugin-validation.yml` | Plugin, fixture, name, and Python validation | Reviewing package readiness |
 | `tests/check_version_consistency.py` | Plugin/CHANGELOG version contract | Checking release metadata |
 | `tests/check_line_endings.py` | Tracked text-file LF contract | Checking cross-platform formatting |
+| `tests/test_public_examples.py` | Small-project example skeleton check | Verifying the M2 public example |
+| `tests/test_readme_navigation.py` | English-first bilingual README contract | Verifying language anchors and install paths |
 | `tests/fixtures/` | Standard-library validation fixtures, including Chinese and ignore-rule variants | Running deterministic tests |
 | `.project-memory/README.md` | Local raw-memory publication boundary | Checking privacy rules |
 
 The active Skill source of truth is `plugins/vibecoding-start/skills/`. Do not recreate a second maintained copy under `.agents/skills/`.
+
