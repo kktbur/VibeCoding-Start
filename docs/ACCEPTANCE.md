@@ -83,7 +83,7 @@
 - Release notes: [Plan 003 release notes](plans/003-v0.1.0-refactor.md#release-notes)
 - M1 release notes: [Plan 004](plans/004-v0.1.1-improvement.md) and the [v0.1.1 GitHub Release](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.1.1)
 - Previous release: [v0.1.0 GitHub Release](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.1.0)
-- M3 release: [VibeCoding Start v0.3.0](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.3.0), Release ID `383280538`, is published, non-draft, and non-prerelease; `refs/heads/main` and `refs/tags/v0.3.0` both resolve to `52e8ade648b56fd92d1dd34e2a19a3030ea6a37a`.
+- M3 release: [VibeCoding Start v0.3.0](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.3.0), Release ID `383280538`, is published, non-draft, and non-prerelease; `refs/tags/v0.3.0` freezes the release merge commit `52e8ade648b56fd92d1dd34e2a19a3030ea6a37a`, while `main` contains the later post-release documentation closeout.
 - M3 tag-triggered CI: [Plugin Validation](https://github.com/kktbur/VibeCoding-Start/actions/runs/33973797062) and [Standards Audit](https://github.com/kktbur/VibeCoding-Start/actions/runs/33973797101) completed with conclusion `success` for `v0.3.0`.
 - Rollback: retain the public `v0.2.0` tag as the previous last-known-good rollback package; keep `v0.1.1` and `v0.1.0` as earlier recovery packages and do not rewrite history by default.
 - Migration note: consumers move from the old repository-local path to the installed `vibecoding-start` Plugin.
