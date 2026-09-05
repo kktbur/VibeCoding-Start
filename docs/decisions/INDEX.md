@@ -11,4 +11,3 @@
 | [ADR-0007](0007-v0.3.0-public-governance-surface.md) | PROPOSED | Add user-facing Chinese and public contribution/security entry points without duplicating the normative standard |
 
 Create another ADR only when a material architecture, security, dependency, publication, or release decision is made.
-
