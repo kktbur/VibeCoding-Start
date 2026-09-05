@@ -4,11 +4,15 @@ All notable changes to VibeCoding Start are documented here.
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-09-05
+
 ### Added
 
-- Add an English-first, Chinese-second README with stable language navigation and a pinned `v0.1.1` installation path.
+- Add an English-first, Chinese-second README with visible language navigation and a pinned `v0.1.1` installation path.
 - Add a redacted small-project example and repository-local Cross-Agent usage notes.
-- Add deterministic validation for the public small-project example.
+- Add a Small/Medium/Large gate-depth matrix and a concrete Small-project artifact path.
+- Add deterministic validation for the public example, README navigation, and Small-project gate depth.
+- Clarify the ownership boundary between `vibecoding-start`, `vibecoding-project-knowledge`, and the scaling reference.
 
 ## [0.1.1] - 2026-09-05
 
