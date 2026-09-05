@@ -11,4 +11,3 @@
 | [007 v0.3.0 ecosystem governance](007-v0.3.0-ecosystem-governance.md) | ACTIVE; OWNER-DIRECTED | Chinese user guide, contribution/security entry points, templates, and repository dogfooding |
 
 Continue from the active plan and update its gate status after each meaningful checkpoint.
-
