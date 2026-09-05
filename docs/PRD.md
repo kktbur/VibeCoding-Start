@@ -1,7 +1,8 @@
 # PRD
 
-- Status: ACTIVE
-- Release target: `v0.1.1`
+- Status: ACTIVE — v0.1.1 released; M2 in progress
+- Release baseline: `v0.1.1`
+- Next milestone: `v0.2.0` M2
 - Product: VibeCoding Start Skill-only Plugin
 
 ## Problem
@@ -21,6 +22,7 @@ The previous repository package worked as a repository-local Skill but did not y
 3. A material change updates the PRD, records a reuse decision, passes independent review and risk-appropriate verification, and presents an owner-readable result.
 4. Raw sessions and machine output remain local while durable knowledge and redacted examples remain safe to publish.
 5. A contributor can run deterministic checks and receive a clear failure when the PRD, package manifest, links, names, or fixtures are broken.
+6. A user or another coding agent can use the compact small-project example and the Cross-Agent handoff notes without relying on hidden chat state.
 
 ## Functional requirements
 
@@ -56,6 +58,14 @@ The repository MUST record the active version, last-known-good state, release no
 
 The repository MUST document reproducible checks for both PowerShell 7 and Unix-like shells, and MUST use repository-level text encoding and line-ending rules that keep review diffs portable.
 
+### REQ-009 — Small-project example
+
+The M2 milestone MUST provide a compact, fully redacted example that shows `AGENTS.md` and the six core project documents without presenting an unimplemented application as production-ready.
+
+### REQ-010 — Cross-Agent handoff
+
+The M2 milestone MUST document a repository-local handoff contract with a read order, required handoff fields, change protocol, evidence boundary, and an explicit statement that no hidden-memory or runtime-orchestrator capability is provided.
+
 ## Non-goals
 
 - Implementing infrastructure named in the original plan as explicitly out of scope.
@@ -85,4 +95,5 @@ The repository MUST document reproducible checks for both PowerShell 7 and Unix-
 ## Open Questions
 
 - Should a future release add a contribution guide, security policy, or issue templates?
-- Should v0.2.0 add the small-project example and cross-Agent usage notes after the v0.1.1 maintenance release is observed?
+- Which real-user feedback should determine the next M2/M3 scope after the owner-directed foundation is reviewed?
+
