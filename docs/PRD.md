@@ -116,4 +116,3 @@ The v0.3.0 milestone MUST provide `SECURITY.md` with a private vulnerability-rep
 
 - The contribution guide, security policy, and Issue/PR templates are now included in the v0.3.0 candidate; their rendered usability remains an owner-acceptance check.
 - Which real-user feedback should determine follow-up improvements after the owner-directed v0.3.0 governance surface is released?
-
