@@ -58,4 +58,3 @@ All notable changes to VibeCoding Start are documented here.
 - Reuse-before-build guidance, independent review, adversarial verification, human acceptance, and rollback-aware release guidance.
 - MIT License, package validation, fixtures, and GitHub Actions checks.
 - Fresh-session E2E verification in an empty Git project.
-
