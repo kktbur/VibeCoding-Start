@@ -21,4 +21,3 @@ cd "${PROJECT_ROOT}"
 "${PYTHON_BIN}" "tests/check_line_endings.py" .
 "${PYTHON_BIN}" "tests/check_name_drift.py" .
 "${PYTHON_BIN}" -m compileall -q "plugins/vibecoding-start/skills"
-
