@@ -25,4 +25,5 @@ Small projects keep the required seven-file project skeleton while avoiding empt
 - [Plan 006](../plans/006-v0.2.0-release-candidate.md)
 - [Small-project gate-depth test](../../tests/test_small_path_contract.py)
 - [M2 public example](../examples/small-project/README.md)
+- [v0.2.0 candidate PR #5](https://github.com/kktbur/VibeCoding-Start/pull/5) and its passing CI runs
 
