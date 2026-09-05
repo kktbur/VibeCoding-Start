@@ -4,6 +4,20 @@ All notable changes to VibeCoding Start are documented here.
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-09-05
+
+### Added
+
+- Add a user-facing `README.zh-CN.md` while keeping the English README and English standard as canonical normative sources.
+- Add `CONTRIBUTING.md`, bug/Skill-behavior/documentation Issue templates, and a pull request template.
+- Add `SECURITY.md` with private reporting and local project-memory handling guidance.
+- Add deterministic validation for the public governance surface.
+
+### Changed
+
+- Pin the stable README installation path to the published `v0.2.0` release.
+- Refresh the indexed project state and release mapping for the v0.3.0 candidate.
+
 ## [0.2.0] - 2026-09-05
 
 ### Added
