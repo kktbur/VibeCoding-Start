@@ -24,4 +24,3 @@ There is no guaranteed response-time SLA. Reports are reviewed according to main
 - If a secret is exposed, revoke or rotate it first, then report the incident privately with a redacted description. Do not assume deleting the file removes it from Git history.
 
 See the README's [Project memory and privacy](README.md#project-memory-and-privacy) section for the user-facing privacy boundary. For ordinary documentation, installation, or behavior questions, use the repository's normal Issue templates instead of the security channel.
-
