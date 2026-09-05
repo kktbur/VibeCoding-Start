@@ -4,7 +4,7 @@ Last updated: 2026-09-05
 
 ## Status
 
-RELEASED BASELINE + v0.2.0 RELEASE CANDIDATE IN PROGRESS — v0.1.1 M1 maintenance changes were squash-merged into public `main` at `38d8c074a90a404ee6455d56693392e2f0eccd67`; the release closeout documentation was on `main` at `f9367395e16af7a8acce57107087af8d3ae11b36`. The public `v0.1.1` tag and GitHub Release remain published from that commit, and the post-release Plugin Validation #189 and Standards Audit #234 passed. M2 was merged through [PR #4](https://github.com/kktbur/VibeCoding-Start/pull/4) at `496e12b2705e1a9e67272c1f475987ea85850770`; post-merge Plugin Validation and Standards Audit passed. The owner accepted the rendered M2 documentation and authorized v0.2.0 release-candidate preparation; no external user feedback is being claimed for this scope.
+RELEASED BASELINE + v0.2.0 RELEASE CANDIDATE OPEN FOR REVIEW — v0.1.1 M1 maintenance changes were squash-merged into public `main` at `38d8c074a90a404ee6455d56693392e2f0eccd67`; the release closeout documentation was on `main` at `f9367395e16af7a8acce57107087af8d3ae11b36`. The public `v0.1.1` tag and GitHub Release remain published from that commit, and the post-release Plugin Validation #189 and Standards Audit #234 passed. M2 was merged through [PR #4](https://github.com/kktbur/VibeCoding-Start/pull/4) at `496e12b2705e1a9e67272c1f475987ea85850770`; post-merge Plugin Validation and Standards Audit passed. The v0.2.0 candidate is now in [PR #5](https://github.com/kktbur/VibeCoding-Start/pull/5) at head `fa1a1209fc3f2fb713b9ff3f7d9381e9ea85c5c5`; its Plugin Validation and Standards Audit checks passed for both push and pull_request events. The owner accepted the rendered M2 documentation and authorized v0.2.0 release-candidate preparation; no external user feedback is being claimed for this scope.
 
 ## Completed
 
@@ -29,6 +29,7 @@ RELEASED BASELINE + v0.2.0 RELEASE CANDIDATE IN PROGRESS — v0.1.1 M1 maintenan
 - Started the owner-directed M2 foundation: bilingual README navigation, pinned release installation, a redacted small-project example, Cross-Agent usage notes, and deterministic public-example validation.
 - Merged M2 through PR #4 and verified that the public README now shows visible `English` and `中文` controls below the cover.
 - Started the v0.2.0 release candidate: Small/Medium/Large gate-depth matrix, Small-project hard constraints, concrete scaling artifacts, cross-reference ownership, and a deterministic Small-path contract test.
+- Completed independent standards/spec review, fixed the three review gaps, published the candidate as [PR #5](https://github.com/kktbur/VibeCoding-Start/pull/5), and verified all four candidate CI runs passed.
 
 ## Active requirements
 
@@ -42,17 +43,18 @@ RELEASED BASELINE + v0.2.0 RELEASE CANDIDATE IN PROGRESS — v0.1.1 M1 maintenan
 - Final E2E output: `INIT_RESULT=PASS`, `UPDATE_RESULT=PASS`, `FINAL_AUDIT_RESULT=PASS`; raw evidence is ignored, the boundary README is not ignored, and the empty project has zero commits and zero application source files.
 - Remote release evidence: [`v0.1.1` tag](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.1.1) and `refs/heads/main` both resolve to `f9367395e16af7a8acce57107087af8d3ae11b36`; Release ID `383184751` is published, and tag-triggered [Plugin Validation #189](https://github.com/kktbur/VibeCoding-Start/actions/runs/33955438453) plus [Standards Audit #234](https://github.com/kktbur/VibeCoding-Start/actions/runs/33955438540) passed.
 - M2 merge evidence: [PR #4](https://github.com/kktbur/VibeCoding-Start/pull/4) merged at `496e12b2705e1a9e67272c1f475987ea85850770`; post-merge [Plugin Validation](https://github.com/kktbur/VibeCoding-Start/actions/runs/33959750140) and [Standards Audit](https://github.com/kktbur/VibeCoding-Start/actions/runs/33959750176) passed.
-- The release-candidate scope is recorded in [Plan 006](plans/006-v0.2.0-release-candidate.md) and [ADR-0006](decisions/0006-small-project-gate-depth-and-release-boundary.md); the Small-path contract is implemented locally and under review.
+- The release-candidate scope is recorded in [Plan 006](plans/006-v0.2.0-release-candidate.md) and [ADR-0006](decisions/0006-small-project-gate-depth-and-release-boundary.md); the Small-path contract is implemented, independently reviewed, published for review, and green in remote CI.
+- Candidate PR evidence: [PR #5](https://github.com/kktbur/VibeCoding-Start/pull/5) is open and unmerged with head `fa1a1209fc3f2fb713b9ff3f7d9381e9ea85c5c5`; [Plugin Validation PR run](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962069628), [Standards Audit PR run](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962069831), [Plugin Validation push run](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962047841), and [Standards Audit push run](https://github.com/kktbur/VibeCoding-Start/actions/runs/33962047900) passed.
 
 ## Known limits
 
 - The E2E used a temporary local marketplace and temporary Plugin installation; both were removed after the test, while the local evidence was retained.
 - The first releases intentionally do not include clean-room installation, Docker smoke testing, or release automation; those remain outside v0.2.0 and require a separate evidence-based decision.
-- Remote Actions are verified as passing for the M1 PR head, the merged `main` commit, and the published `v0.1.1` tag; the v0.1.0 release metadata remains valid and unchanged.
+- Remote Actions are verified as passing for the M1 PR head, the merged `main` commit, the published `v0.1.1` tag, and the v0.2.0 candidate PR/push head; the v0.1.0 release metadata remains valid and unchanged.
 - The current GitHub connector still cannot create Release objects; the owner-created public Release was verified through GitHub API and the public release page.
 - The v0.1.0 Release metadata and tag target are valid; its body still contains historical pre-publication wording and should be cleaned up when Release-edit access is available.
 
 ## Next step
 
-Finish the v0.2.0 release-candidate review, run the complete local and remote checks, and publish the `v0.2.0` tag/Release only after the package, merge, tag, Release, and tag-triggered CI checkpoints are separately verified. Keep clean-room installation, Docker smoke testing, release automation, and further scope behind a separate decision.
+Owner review and merge [PR #5](https://github.com/kktbur/VibeCoding-Start/pull/5) if accepted. After merge, create and verify the `v0.2.0` tag, GitHub Release, and tag-triggered CI as separate checkpoints; until then keep `v0.1.1` as the stable install pin and rollback package. Keep clean-room installation, Docker smoke testing, release automation, and further scope behind a separate decision.
 
