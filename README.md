@@ -2,7 +2,12 @@
   <img src="assets/vibecoding-start-cover.png" alt="VibeCoding Start cover" width="1200">
 </p>
 
-[English](#vibecoding-start-english) | [中文](#vibecoding-start-chinese)
+<p align="center">
+  <strong>Language / 语言</strong><br>
+  <a href="#vibecoding-start-english"><kbd>English</kbd></a>
+  &nbsp;|&nbsp;
+  <a href="#vibecoding-start-chinese"><kbd>中文</kbd></a>
+</p>
 
 <a name="vibecoding-start-english"></a>
 
@@ -144,7 +149,12 @@ MIT. See [LICENSE](LICENSE).
 
 # VibeCoding Start（中文）
 
-[English](#vibecoding-start-english) | [中文](#vibecoding-start-chinese)
+<p align="center">
+  <strong>Language / 语言</strong><br>
+  <a href="#vibecoding-start-english"><kbd>English</kbd></a>
+  &nbsp;|&nbsp;
+  <a href="#vibecoding-start-chinese"><kbd>中文</kbd></a>
+</p>
 
 不要让 Vibe Coding 最终变成难以维护的 AI 生成代码堆。
 
