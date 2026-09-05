@@ -22,8 +22,15 @@ class ReadmeNavigationTests(unittest.TestCase):
         english_anchor = '<a name="vibecoding-start-english"></a>'
         chinese_anchor = '<a name="vibecoding-start-chinese"></a>'
 
-        self.assertIn("[English](#vibecoding-start-english)", self.content)
-        self.assertIn("[中文](#vibecoding-start-chinese)", self.content)
+        self.assertIn(
+            '<a href="#vibecoding-start-english"><kbd>English</kbd></a>',
+            self.content,
+        )
+        self.assertIn(
+            '<a href="#vibecoding-start-chinese"><kbd>中文</kbd></a>',
+            self.content,
+        )
+        self.assertIn("<strong>Language / 语言</strong>", self.content)
         self.assertLess(self.content.index(english_anchor), self.content.index(chinese_anchor))
         self.assertEqual(self.content.count(english_anchor), 1)
         self.assertEqual(self.content.count(chinese_anchor), 1)
