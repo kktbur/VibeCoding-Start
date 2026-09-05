@@ -40,4 +40,3 @@ VibeCoding Start should be a small, installable, reusable Codex Plugin that give
 - Existing public history contains the earlier repository-local layout; the active source of truth moves to `plugins/vibecoding-start/` without rewriting history.
 - Raw memory previously tracked in the repository must be removed from the current tree while being preserved locally; history rewrite is reserved for confirmed secret exposure.
 - A GitHub Actions workflow can be present and syntactically valid without its remote run having completed; remote execution must be verified separately.
-
