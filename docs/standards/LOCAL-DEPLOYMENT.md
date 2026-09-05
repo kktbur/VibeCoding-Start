@@ -20,6 +20,6 @@ This file maps the v0.1.0 refactor plan to the current repository. The active pa
 | Plugin checks | `tests/validate_plugin.py`, fixture tests, name-drift check, `compileall` | IMPLEMENTED |
 | CI | `standards-audit.yml`, `plugin-validation.yml` | IMPLEMENTED; PR #1 runs passed |
 | End-to-end fresh-session install | Isolated local marketplace plus fresh Codex CLI session in an empty Git project; INIT/UPDATE/AUDIT and boundary checks passed | PASS |
-| GitHub v0.1.0 Release | Tag and Release object | PENDING authenticated GitHub write access; PR #1 is merged at `48a14a8…` and post-merge CI passed |
+| GitHub v0.1.0 Release | Tag and Release object | IMPLEMENTED; tag `v0.1.0` points to `48a14a8…` and the [GitHub Release](https://github.com/kktbur/VibeCoding-Start/releases/tag/v0.1.0) is published |
 
-Remote review: [PR #1](https://github.com/kktbur/VibeCoding-Start/pull/1) is merged into `main`; both configured GitHub Actions checks passed on the merged commit. The first-release E2E deliberately excludes clean-room install, Docker smoke testing, and release automation. Tag/Release creation is pending an authenticated GitHub write path.
+Remote review: [PR #1](https://github.com/kktbur/VibeCoding-Start/pull/1) is merged into `main`; both configured GitHub Actions checks passed on the merged commit. The first-release E2E deliberately excludes clean-room install, Docker smoke testing, and release automation. M1 maintenance work is tracked separately in Plan 004.

@@ -20,5 +20,9 @@ jobs:
         run: python tests/test_project_knowledge.py
       - name: Check active name consistency
         run: python tests/check_name_drift.py .
+      - name: Check Plugin version against CHANGELOG
+        run: python tests/check_version_consistency.py
+      - name: Check tracked text line endings
+        run: python tests/check_line_endings.py .
       - name: Compile Skill helper scripts
         run: python -m compileall -q plugins/vibecoding-start/skills

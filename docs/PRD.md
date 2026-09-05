@@ -1,7 +1,7 @@
 # PRD
 
 - Status: ACTIVE
-- Release target: `v0.1.0`
+- Release target: `v0.1.1`
 - Product: VibeCoding Start Skill-only Plugin
 
 ## Problem
@@ -42,7 +42,7 @@ The project knowledge workflow MUST create and maintain `docs/PRD.md`, link it f
 
 ### REQ-005 — Deterministic validation
 
-The repository MUST validate the Plugin manifest, both Skill packages, the project-document contract, repository links, current-state freshness, Python syntax, fixture behavior, and active-name consistency without third-party test infrastructure.
+The repository MUST validate the Plugin manifest, both Skill packages, the project-document contract, repository links, current-state freshness, Python syntax, fixture behavior, active-name consistency, version consistency, and tracked text-file line endings without third-party test infrastructure.
 
 ### REQ-006 — Public usability
 
@@ -50,7 +50,11 @@ The README MUST explain the problem, workflow, installation shape, privacy bound
 
 ### REQ-007 — Release readiness
 
-The repository MUST record version `0.1.0`, last-known-good state, release notes, rollback guidance, owner acceptance, and the boundary between package readiness and an actual GitHub Release.
+The repository MUST record the active version, last-known-good state, release notes, rollback guidance, owner acceptance, and the boundary between package readiness and an actual GitHub Release.
+
+### REQ-008 — Cross-platform maintenance
+
+The repository MUST document reproducible checks for both PowerShell 7 and Unix-like shells, and MUST use repository-level text encoding and line-ending rules that keep review diffs portable.
 
 ## Non-goals
 
@@ -80,5 +84,5 @@ The repository MUST record version `0.1.0`, last-known-good state, release notes
 
 ## Open Questions
 
-- Should the maintainer create the GitHub `v0.1.0` tag and Release after owner acceptance and a successful remote workflow run?
-- Should a future release add a logo, contribution guide, security policy, or issue templates?
+- Should a future release add a contribution guide, security policy, or issue templates?
+- Should v0.2.0 add the small-project example and cross-Agent usage notes after the v0.1.1 maintenance release is observed?
